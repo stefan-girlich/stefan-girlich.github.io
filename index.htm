@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<link href="main.css" rel="stylesheet" type="text/css" media="screen">
+
+<script src="jquery-2.1.0.min.js"></script>
+<script>
+$(function() {
+
+});
+
+</script>
+
+
+
+<title>stefan-girlich at GitHub</title>
+</head>
+<body>
+
+<section>
+
+	<div id="wrap"><h1>initial commit</h1><span>not much to see here yet.</span></div>
+
+</section>
+
+<footer>
+
+	<div id="links">
+		<a href="http://stefan-girlich.github.io" target="_blank">stefan-girlich.github.io</a>
+		<br />
+		<a href="http://github.com/stefan-girlich" target="_blank">github.com/stefan-girlich</a>
+	</div>
+
+
+	<div id="contact">
+	<span>&copy; Stefan Girlich, </span><span class="year">2014</span><br />
+	</div>
+</footer>
+
+<script>
+$('footer .year').html(new Date().getFullYear());
+return;
+var a_mail = $('footer #contact a');
+newHref = a_mail.attr('href').replace('at', '@').split(' ').join('');
+a_mail.attr('href' , newHref);
+a_mail.html(newHref.replace('mailto:', ''));
+</script>
+
+
+
+</body>
+</html>
