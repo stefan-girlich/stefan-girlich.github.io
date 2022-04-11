@@ -16,9 +16,7 @@
         "Conception and implementation of cloud-native IT architecture including backend services and web frontend applications",
         "Implementation of computer-vision-based procedures and tooling for individual key shape recognition",
         "Implementation of machine-learning-based prototypes and 3D training data generation pipelines for automated key blank recognition"
-      ],
-      "tech_tags": ["react"],
-      "softskill_tags": ["org_building"]
+      ]
     },
     {
       "organization": "BCG Platinion",
@@ -30,9 +28,7 @@
         "On- and offsite technical consulting and project management in digitization projects for multinational enterprise clients",
         "Team leadership for a cohort of 30 design and engineering specialists of different technical backgrounds",
         "Implementation of engineering infrastructure, strategic roadmap and processes, including more than 100 conducted engineering interviews"
-      ],
-      "tech_tags": ["react"],
-      "softskill_tags": ["org_building"]
+      ]
     },
     {
       "organization": "Iconmobile GmbH",
@@ -44,9 +40,7 @@
         "Team leadership for a cohort of 10 native Android engineers including shaping of processes and best practices for software development",
         "Hands-on implementation of native Android and full-stack web projects",
         "Technical consulting and on-site project management for automotive clients"
-      ],
-      "tech_tags": ["react"],
-      "softskill_tags": ["org_building"]
+      ]
     },
     {
       "organization": "Klopotek AG",
@@ -58,9 +52,7 @@
         "Conception of standardized web user interface components",
         "Optimization of collaboration processes for a remote product team of ten",
         "Hands-on implementation of features for publishers in the web platform"
-      ],
-      "tech_tags": ["react"],
-      "softskill_tags": ["org_building"]
+      ]
     },
     {
       "organization": "Unister GmbH",
@@ -72,9 +64,7 @@
         "Agile leadership for eight designers, mobile app engineers and QA testers",
         "Mentoring and technical reviews for junior engineers",
         "Development of native Android apps like “Fluege.de” and “Ab in den Urlaub” with more than 1.5m total users"
-      ],
-      "tech_tags": ["react"],
-      "softskill_tags": ["org_building"]
+      ]
     },
     {
       "organization": "YOC AG",
@@ -85,9 +75,7 @@
       "activities": [
         "Technical leadership for a team of six iOS and Android engineers",
         "Developing a component for rendering display ads in native Android apps"
-      ],
-      "tech_tags": ["react"],
-      "softskill_tags": ["org_building"]
+      ]
     },
     {
       "organization": "THE BRETTINGHAMS",
@@ -98,9 +86,7 @@
       "activities": [
         "Development of full-stack web apps, native apps and 3D experiences",
         "Responsible for internal server administration and backup automation"
-      ],
-      "tech_tags": ["react"],
-      "softskill_tags": ["org_building"]
+      ]
     }
   ],
   "education_history_title": "Education",
@@ -111,9 +97,7 @@
       "start_year": 2009,
       "end_year": 2011,
       "text": "Media informatics studies (B. Sc.) spanning rich-media application development and IT fundamentals, finishing with a bachelor's thesis and Android-based software prototype for a web API for camera-based head position tracking",
-      "activities": [],
-      "tech_tags": [],
-      "softskill_tags": []
+      "activities": []
     },
     {
       "organization": null,
@@ -121,9 +105,7 @@
       "start_year": 2001,
       "end_year": 2001,
       "text": "Essentially an early type of blog capturing my random teenage thoughts, also containing sections for album and PC game reviews and inside jokes at my local school",
-      "activities": [],
-      "tech_tags": [],
-      "softskill_tags": []
+      "activities": []
     },
     {
       "organization": null,
@@ -131,9 +113,7 @@
       "start_year": 1993,
       "end_year": 1993,
       "text": "This is how it all began. 16 MHz, 4MB RAM, MS-DOS 5.0, Windows 3.1 — endless fun.",
-      "activities": [],
-      "tech_tags": [],
-      "softskill_tags": []
+      "activities": []
     },
     {
       "organization": null,
@@ -141,9 +121,7 @@
       "start_year": 1987,
       "end_year": 1987,
       "text": "",
-      "activities": [],
-      "tech_tags": [],
-      "softskill_tags": []
+      "activities": []
     }
   ]
 }

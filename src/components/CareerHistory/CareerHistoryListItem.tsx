@@ -79,8 +79,6 @@ export interface CareerHistoryItem {
   end_year: number | null
   text: string
   activities: string[]
-  tech_tags: string[]
-  softskill_tags: string[]
 }
 
 interface Props {
@@ -92,8 +90,7 @@ interface Props {
 const CareerHistoryListItem = ({ data, index, totalItemCount }: Props) => {
   const [isExpanded, setExpanded] = useState(false)
   const toggle = () => setExpanded(!isExpanded)
-  const hasDetailContent =
-    !!data.text.length || !!data.tech_tags.length || !!data.softskill_tags.length || !!data.activities.length
+  const hasDetailContent = !!data.text.length || !!data.activities.length
 
   return (
     <Root>
