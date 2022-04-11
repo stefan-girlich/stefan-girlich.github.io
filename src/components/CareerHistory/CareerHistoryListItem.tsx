@@ -26,6 +26,7 @@ const TitleRow = styled(H4)`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: ${({ theme }) => theme.spacing(1.5)};
   margin-bottom: ${({ theme }) => theme.spacing(1)};
   cursor: pointer;
 `
