@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { SectionTitle } from '../Header/Heading'
 import CareerHistoryListItem, { CareerHistoryItem } from './CareerHistoryListItem'
 
 const Root = styled.div`
-  margin-bottom: ${({ theme }) => theme.spacing(5)};
+  margin-bottom: ${({ theme }) => theme.spacing(8)};
 `
 
 const CareerList = styled.ul`

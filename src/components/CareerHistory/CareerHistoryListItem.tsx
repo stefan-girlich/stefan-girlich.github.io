@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { H4 } from '../Header/Heading'
 import Paragraph from '../Paragraph/Paragraph'
 import CareerHistoryTimelineSegment from './CareerHistoryTimelineSegment'

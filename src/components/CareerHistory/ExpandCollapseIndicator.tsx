@@ -1,6 +1,6 @@
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 const Root = styled.div`
   color: ${({ theme }) => theme.palette.primary.main};

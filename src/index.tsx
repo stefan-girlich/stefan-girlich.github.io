@@ -4,7 +4,7 @@ import './index.css'
 import './reset.css'
 import HomePage from './HomePage'
 import reportWebVitals from './reportWebVitals'
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { createGlobalStyle, ThemeProvider } from 'styled-components/macro'
 import '@fontsource/montserrat/variable.css'
 import theme from './config/theme'
 

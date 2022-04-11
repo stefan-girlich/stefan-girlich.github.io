@@ -138,5 +138,151 @@
       "title": "Impact",
       "text": "I want to contribute to a purpose that is aligned with my personal values. On a small scale, this means building convenient user experiences; on a larger scale I want to help solve burning issues like climate change and all forms of social inequality."
     }
+  ],
+  "skills_title": "Skills",
+  "skills_subsections": [
+    {
+      "skills_category_title": "Platforms and frameworks",
+      "column": 0,
+      "items": [
+        {
+          "name": "React, React Native",
+          "score": 5
+        },
+        {
+          "name": "Vue.js",
+          "score": 4
+        },
+        {
+          "name": "Angular",
+          "score": 3
+        },
+        {
+          "name": "Android SDK",
+          "score": 5
+        },
+        {
+          "name": "Node.js / Express",
+          "score": 5
+        },
+        {
+          "name": "Pandas, numpy",
+          "score": 3
+        },
+        {
+          "name": "OpenCV",
+          "score": 3
+        },
+        {
+          "name": "Keras",
+          "score": 3
+        },
+
+        {
+          "name": "Keras, Tensorflow",
+          "score": 3
+        },
+        {
+          "name": "Docker",
+          "score": 4
+        },
+        {
+          "name": "Kubernetes",
+          "score": 2
+        },
+        {
+          "name": "Hasura, GraphQL",
+          "score": 4
+        },
+        {
+          "name": "PostgreSQL, MySQL",
+          "score": 4
+        },
+        {
+          "name": "MongoDB",
+          "score": 4
+        },
+        {
+          "name": "Azure",
+          "score": 4
+        },
+        {
+          "name": "AWS",
+          "score": 3
+        },
+        {
+          "name": "Git",
+          "score": 5
+        }
+      ]
+    },
+    {
+      "skills_category_title": "Programming languages",
+      "column": 1,
+      "items": [
+        {
+          "name": "HTML, CSS/SCSS, JSX/TSX",
+          "score": 5
+        },
+        {
+          "name": "TypeScript, JavaScript",
+          "score": 5
+        },
+        {
+          "name": "Kotlin, Java, Groovy",
+          "score": 5
+        },
+        {
+          "name": "Python",
+          "score": 4
+        },
+        {
+          "name": "C#",
+          "score": 3
+        },
+        {
+          "name": "BASH",
+          "score": 4
+        }
+      ]
+    },
+    {
+      "skills_category_title": "Topics and concepts",
+      "column": 1,
+      "items": [
+        {
+          "name": "Continuous deployment",
+          "score": 4
+        },
+        {
+          "name": "Cloud-native architecture",
+          "score": 4
+        },
+        {
+          "name": "Machine Learning",
+          "score": 3
+        },
+        {
+          "name": "IoT",
+          "score": 3
+        },
+        {
+          "name": "Linux server administration",
+          "score": 4
+        },
+        {
+          "name": "Cybersecurity",
+          "score": 4
+        },
+        {
+          "name": "Digital media production",
+          "score": 4
+        },
+        {
+          "name": "3D modeling and animation",
+          "score": 3
+        }
+      ]
+    }
   ]
 }

@@ -1,4 +1,4 @@
-import { DefaultTheme } from 'styled-components'
+import { DefaultTheme } from 'styled-components/macro'
 
 // source: https://coolors.co/bfbdc1-6d6a75-37323e-deb841-de9e36
 const COLORS = {
@@ -7,6 +7,7 @@ const COLORS = {
   BLACK_COFFEE: '#37323e',
   GOLD_METALLIC: '#deb841',
   GAMBOGE: '#de9e36',
+  BLACK_COFFEE_DARK: '#2b2730',
 }
 
 const CONTRASTS = {
@@ -37,6 +38,7 @@ export const theme: DefaultTheme = {
     },
     background: {
       main: COLORS.BLACK_COFFEE,
+      dark: COLORS.BLACK_COFFEE_DARK,
       contrastText: CONTRASTS.BLACK_COFFEE,
     },
   },

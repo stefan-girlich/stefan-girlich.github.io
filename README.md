@@ -8,10 +8,6 @@
 
 ## next
 
-- section: what drives me
-  - tech
-  - ownership
-  - impact
 - section: skills
   - tech
   - management / soft

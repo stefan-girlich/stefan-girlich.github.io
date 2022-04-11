@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import data from '../../config/data.json'
 import Paragraph from '../Paragraph/Paragraph'
 

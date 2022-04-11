@@ -1,28 +1,19 @@
-import 'styled-components'
+import 'styled-components/macro'
 
-declare module 'styled-components' {
+interface ColorSet {
+  main: string
+  dark?: string
+  contrastText: string
+}
+
+declare module 'styled-components/macro' {
   export interface DefaultTheme {
     palette: {
-      primary: {
-        main: string
-        contrastText: string
-      }
-      secondary: {
-        main: string
-        contrastText: string
-      }
-      tertiary: {
-        main: string
-        contrastText: string
-      }
-      quartary: {
-        main: string
-        contrastText: string
-      }
-      background: {
-        main: string
-        contrastText: string
-      }
+      primary: ColorSet
+      secondary: ColorSet
+      tertiary: ColorSet
+      quartary: ColorSet
+      background: ColorSet
     }
     spacing: (factor: number) => string
     fontSizes: {
