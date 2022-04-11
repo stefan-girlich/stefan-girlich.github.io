@@ -18,6 +18,18 @@ const CONTRASTS = {
   GAMBOGE: '#000',
 }
 
+const BRAND_COLORS = {
+  LINKEDIN: '#0a66c2',
+  GITHUB: '#fff',
+  SOUNDCLOUD: '#f9530a',
+}
+
+const BRAND_CONTRASTS = {
+  LINKEDIN: '#fff',
+  GITHUB: '#161b21',
+  SOUNDCLOUD: '#fff',
+}
+
 export const theme: DefaultTheme = {
   palette: {
     primary: {
@@ -40,6 +52,24 @@ export const theme: DefaultTheme = {
       main: COLORS.BLACK_COFFEE,
       dark: COLORS.BLACK_COFFEE_DARK,
       contrastText: CONTRASTS.BLACK_COFFEE,
+    },
+    brands: {
+      email: {
+        main: COLORS.GOLD_METALLIC,
+        contrastText: CONTRASTS.GOLD_METALLIC,
+      },
+      linkedin: {
+        main: BRAND_COLORS.LINKEDIN,
+        contrastText: BRAND_CONTRASTS.LINKEDIN,
+      },
+      github: {
+        main: BRAND_COLORS.GITHUB,
+        contrastText: BRAND_CONTRASTS.GITHUB,
+      },
+      soundcloud: {
+        main: BRAND_COLORS.SOUNDCLOUD,
+        contrastText: BRAND_CONTRASTS.SOUNDCLOUD,
+      },
     },
   },
   spacing: (factor: number) => `${factor * 8}px`,

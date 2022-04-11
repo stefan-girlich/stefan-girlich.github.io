@@ -7,12 +7,17 @@
 ## TODO
 
 ## next
+
+- "?" button and explanation overlay for skills sections
 - mobile
+- PDF download
 
 ## now, but nice to have
 
+- optimize SEO
 - webgl background waves
 - little reveal animations
+- style text selection
 
 ### later
 

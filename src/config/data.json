@@ -383,5 +383,29 @@
         }
       ]
     }
+  ],
+  "contact_title": "Contact",
+  "contact_text": "Feel free to get in touch! I'm always happy to hear about new opportunities, talk tech or receive feedback about this website. The codebase for this website is open source and you're free to use it; see the <a href='https://github.com/stefan-girlich/stefan-girlich.github.io' target='_blank'>GitHub repository</a> for more information.",
+  "contact_links": [
+    {
+      "label": "Email",
+      "url": "mailto:stefan.girlich@gmail.com",
+      "type": "email"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/stefan-girlich-96b393161/",
+      "type": "linkedin"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/stefan-girlich",
+      "type": "github"
+    },
+    {
+      "label": "SoundCloud",
+      "url": "https://soundcloud.com/elektrosteve",
+      "type": "soundcloud"
+    }
   ]
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 import CareerHistory from './components/CareerHistory/CareerHistory'
+import Contact from './components/Contact/Contact'
 import Header from './components/Header/Header'
 import MainContent from './components/MainContent/MainContent'
 import Motivation from './components/Motivation/Motivation'
@@ -24,6 +25,7 @@ function HomePage() {
       <CareerHistory title={data.education_history_title} items={data.education_history_items} />
       <Skills title={data.technical_skills_title} subsections={data.technical_skills_subsections} />
       <Skills title={data.management_skills_title} subsections={data.management_skills_subsections} />
+      <Contact />
     </MainContent>
   )
 }

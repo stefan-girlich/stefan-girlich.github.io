@@ -9,7 +9,11 @@ import '@fontsource/montserrat/variable.css'
 import theme from './config/theme'
 
 const GlobalStyle = createGlobalStyle`
-  body {
+  * {
+    cursor: default;
+  }
+
+  html, body {
     background: ${({ theme }) => theme.palette.background.main};
   }
 `

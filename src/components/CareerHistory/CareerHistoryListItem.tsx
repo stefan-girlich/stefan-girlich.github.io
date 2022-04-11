@@ -29,6 +29,10 @@ const TitleRow = styled(H4)`
   margin-top: ${({ theme }) => theme.spacing(1.5)};
   margin-bottom: ${({ theme }) => theme.spacing(1)};
   cursor: pointer;
+
+  *  {
+    cursor: pointer;
+  }
 `
 
 const TitleRowLefthandItems = styled.div`
