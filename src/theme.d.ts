@@ -30,6 +30,7 @@ declare module 'styled-components' {
       lg: string
       md: string
       sm: string
+      xs: string
       paragraph: string
     }
   }

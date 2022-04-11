@@ -1,0 +1,44 @@
+import styled from 'styled-components'
+
+const DOT_SIZE = 2
+
+const Root = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: ${({ theme }) => theme.spacing(DOT_SIZE)};
+  margin-right: ${({ theme }) => theme.spacing(3)};
+`
+
+const Dot = styled.div`
+  width: 8px;
+  height: 8px;
+  background: ${({ theme }) => theme.palette.tertiary.main};
+`
+
+const VerticalLineTop = styled.div`
+  width: 0;
+  height: 22.5px;
+  border-left: 1px dashed ${({ theme }) => theme.palette.quartary.main};
+`
+
+const VerticalLineBottom = styled(VerticalLineTop)`
+  height: auto;
+  flex: 1;
+`
+
+interface Props {
+  isMostRecent?: boolean
+}
+
+const CareerHistoryItemIndicator = ({ isMostRecent }: Props) => {
+  return (
+    <Root>
+      <VerticalLineTop style={isMostRecent ? { opacity: 0 } : undefined} />
+      <Dot />
+      <VerticalLineBottom />
+    </Root>
+  )
+}
+
+export default CareerHistoryItemIndicator

@@ -1,15 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
+import './reset.css'
 import HomePage from './HomePage'
 import reportWebVitals from './reportWebVitals'
-import { ThemeProvider } from 'styled-components'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import '@fontsource/montserrat/variable.css'
 import theme from './config/theme'
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background: ${({ theme }) => theme.palette.background.main};
+  }
+`
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <HomePage />
     </ThemeProvider>
   </React.StrictMode>,

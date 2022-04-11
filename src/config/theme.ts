@@ -45,7 +45,8 @@ export const theme: DefaultTheme = {
     xl: '36px',
     lg: '26px',
     md: '20px',
-    sm: '18px',
+    sm: '14px',
+    xs: '10px',
     paragraph: '16px',
   },
 }
