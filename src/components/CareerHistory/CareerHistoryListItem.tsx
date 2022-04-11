@@ -112,13 +112,15 @@ const CareerHistoryListItem = ({ data, index, totalItemCount }: Props) => {
           <Details style={isExpanded ? undefined : { maxHeight: 0, opacity: 0 }}>
             <Paragraph>{data.text}</Paragraph>
 
-            <ActivityList>
-              {data.activities.map((activity, activityIndex) => (
-                <ActivityListItem as="li" key={`${index}_${activityIndex}`}>
-                  {activity}
-                </ActivityListItem>
-              ))}
-            </ActivityList>
+            {!!data.activities.length && (
+              <ActivityList>
+                {data.activities.map((activity, activityIndex) => (
+                  <ActivityListItem as="li" key={`${index}_${activityIndex}`}>
+                    {activity}
+                  </ActivityListItem>
+                ))}
+              </ActivityList>
+            )}
           </Details>
         )}
       </Content>
