@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import CareerHistory from './components/CareerHistory'
-import MainContent from './components/MainContent'
-import Header from './components/Header'
-import OpenToOpportunitiesNote from './components/OpenToOpportunitiesNote'
+import CareerHistory from './components/CareerHistory/CareerHistory'
+import MainContent from './components/MainContent/MainContent'
+import Header from './components/Header/Header'
+import OpenToOpportunitiesNote from './components/OpenToOpportunitiesNote/OpenToOpportunitiesNote'
 
 import data from './config/data.json'
 

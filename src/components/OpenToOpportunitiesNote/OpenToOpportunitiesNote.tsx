@@ -1,6 +1,6 @@
-import data from '../config/data.json'
-import { H4 } from './Heading'
-import Paragraph from './Paragraph'
+import data from '../../config/data.json'
+import { H4 } from '../Header/Heading'
+import Paragraph from '../Paragraph/Paragraph'
 
 const OpenToOpportunitiesNote = () => {
   return (

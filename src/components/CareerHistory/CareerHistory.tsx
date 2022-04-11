@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import CareerHistoryItemIndicator from './CareerHistoryItemIndicator'
-import { H3, H4 } from './Heading'
-import Paragraph from './Paragraph'
+import { H3, H4 } from '../Header/Heading'
+import Paragraph from '../Paragraph/Paragraph'
 
 const Root = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing(3)};

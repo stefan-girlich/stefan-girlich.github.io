@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import data from '../config/data.json'
-import Paragraph from './Paragraph'
+import data from '../../config/data.json'
+import Paragraph from '../Paragraph/Paragraph'
 
 const Root = styled.header`
   margin-top: ${({ theme }) => theme.spacing(6)};
