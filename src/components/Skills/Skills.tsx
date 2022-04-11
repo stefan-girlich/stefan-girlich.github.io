@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import data from '../../config/data.json'
+import SkillSubsectionData from '../../entity/SkillSubsectionData'
 import { SectionTitle } from '../Header/Heading'
 import SkillsSubsection from './SkillsSubsection'
 
@@ -41,21 +41,26 @@ const splitSubsectionsByColumn = <T extends { column: number }>(items: T[]) => {
   )
 }
 
-const Skills = () => {
-  const subsectionsByCol = splitSubsectionsByColumn(data.skills_subsections)
+interface Props {
+  title: string
+  subsections: SkillSubsectionData[]
+}
+
+const Skills = ({ title, subsections }: Props) => {
+  const subsectionsByCol = splitSubsectionsByColumn(subsections)
 
   return (
     <Root>
-      <SectionTitle>{data.skills_title}</SectionTitle>
+      <SectionTitle>{title}</SectionTitle>
       <Content>
         <Col>
-          {subsectionsByCol[0].map(({ skills_category_title, items }, index) => (
-            <SkillsSubsection title={skills_category_title} skills={items} key={index} />
+          {subsectionsByCol[0].map(({ title, items }, index) => (
+            <SkillsSubsection title={title} skills={items} key={index} />
           ))}
         </Col>
         <Col>
-          {subsectionsByCol[1].map(({ skills_category_title, items }, index) => (
-            <SkillsSubsection title={skills_category_title} skills={items} key={index} />
+          {subsectionsByCol[1].map(({ title, items }, index) => (
+            <SkillsSubsection title={title} skills={items} key={index} />
           ))}
         </Col>
       </Content>

@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro'
+import SkillData from '../../entity/SkillData'
 import { SubsectionTitle } from '../Header/Heading'
-import SkillRow, { Skill } from './SkillRow'
+import SkillRow from './SkillRow'
 
 const Root = styled.div``
 
@@ -15,7 +16,7 @@ const SkillsList = styled.ul`
 
 interface Props {
   title: string
-  skills: Skill[]
+  skills: SkillData[]
 }
 
 const SkillsSubsection = ({ title, skills }: Props) => {

@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro'
+import SkillData from '../../entity/SkillData'
 import SkillScore from './SkillScore'
 
 const Root = styled.li`
@@ -11,13 +12,8 @@ const Root = styled.li`
 
 const SkillName = styled.span``
 
-export interface Skill {
-  name: string
-  score: number
-}
-
 interface Props {
-  data: Skill
+  data: SkillData
 }
 
 const SkillRow = ({ data }: Props) => {

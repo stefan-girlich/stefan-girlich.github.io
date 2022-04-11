@@ -139,10 +139,10 @@
       "text": "I want to contribute to a purpose that is aligned with my personal values. On a small scale, this means building convenient user experiences; on a larger scale I want to help solve burning issues like climate change and all forms of social inequality."
     }
   ],
-  "skills_title": "Skills",
-  "skills_subsections": [
+  "technical_skills_title": "Technical skills",
+  "technical_skills_subsections": [
     {
-      "skills_category_title": "Platforms and frameworks",
+      "title": "Platforms and frameworks",
       "column": 0,
       "items": [
         {
@@ -217,7 +217,7 @@
       ]
     },
     {
-      "skills_category_title": "Programming languages",
+      "title": "Programming languages",
       "column": 1,
       "items": [
         {
@@ -247,7 +247,7 @@
       ]
     },
     {
-      "skills_category_title": "Topics and concepts",
+      "title": "Topics and concepts",
       "column": 1,
       "items": [
         {
@@ -257,6 +257,10 @@
         {
           "name": "Cloud-native architecture",
           "score": 4
+        },
+        {
+          "name": "Infrastructure as Code",
+          "score": 2
         },
         {
           "name": "Machine Learning",
@@ -281,6 +285,101 @@
         {
           "name": "3D modeling and animation",
           "score": 3
+        }
+      ]
+    }
+  ],
+  "management_skills_title": "Management and conceptual skills",
+  "management_skills_subsections": [
+    {
+      "title": "Topics and concepts",
+      "column": 0,
+      "items": [
+        {
+          "name": "Agile team management",
+          "score": 5
+        },
+        {
+          "name": "Engineering cohort strategy",
+          "score": 4
+        },
+        {
+          "name": "Engineering mentorship",
+          "score": 4
+        },
+        {
+          "name": "Public speaking",
+          "score": 5
+        },
+        {
+          "name": "Tech/IT consulting",
+          "score": 4
+        },
+        {
+          "name": "User interface design",
+          "score": 3
+        }
+      ]
+    },
+    {
+      "title": "Methodologies",
+      "column": 0,
+      "items": [
+        {
+          "name": "Scrum",
+          "score": 5
+        },
+        {
+          "name": "Kanban",
+          "score": 4
+        },
+        {
+          "name": "Design thinking",
+          "score": 2
+        }
+      ]
+    },
+    {
+      "title": "Languages",
+      "column": 1,
+      "items": [
+        {
+          "name": "German",
+          "score": 5
+        },
+        {
+          "name": "English",
+          "score": 5
+        },
+        {
+          "name": "French",
+          "score": 3
+        },
+        {
+          "name": "Spanish",
+          "score": 2
+        },
+        {
+          "name": "Mandarin",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "title": "Tools",
+      "column": 1,
+      "items": [
+        {
+          "name": "Jira, Confluence",
+          "score": 5
+        },
+        {
+          "name": "Miro, Sketch, Figma",
+          "score": 4
+        },
+        {
+          "name": "PowerPoint",
+          "score": 5
         }
       ]
     }

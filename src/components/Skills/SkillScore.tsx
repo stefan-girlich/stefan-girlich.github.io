@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import SkillScoreCircle from './SkillScoreCircle'
+import SkillScoreIndicator from './SkillScoreIndicator'
 
 const MAX_SKILL_SCORE = 5
 
@@ -13,11 +13,11 @@ interface Props {
 }
 
 const SkillScore = ({ value }: Props) => {
-  const isLearning = value <= 3
+  const isLearning = value <= 2
   return (
     <Root>
       {[...Array(MAX_SKILL_SCORE)].map((_, i) => (
-        <SkillScoreCircle filled={i + 1 <= value} learning={isLearning} key={i} />
+        <SkillScoreIndicator filled={i + 1 <= value} learning={isLearning} key={i} />
       ))}
     </Root>
   )

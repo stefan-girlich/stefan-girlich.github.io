@@ -7,11 +7,6 @@
 ## TODO
 
 ## next
-
-- section: skills
-  - tech
-  - management / soft
-- section "education": add and link tags
 - mobile
 
 ## now, but nice to have
