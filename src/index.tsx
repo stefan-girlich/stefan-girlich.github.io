@@ -1,12 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import App from './App'
+import HomePage from './HomePage'
 import reportWebVitals from './reportWebVitals'
+import { ThemeProvider } from 'styled-components'
+import theme from './config/theme'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <HomePage />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )

@@ -1,0 +1,106 @@
+{
+  "title": "stefan.girlich",
+  "subtitle": "Tech enthusiast | Engineer | IT consultant",
+  "intro_text": "Dedicated IT professional with a deep passion for a broad range of technologies. Over ten years of experience working as an engineer, solution architect and consultant in various organizational contexts and industries.",
+  "open_to_opportunities_title": "Open to new opportunities",
+  "open_to_opportunities_text": "I am currently searching for a new role. Find out more about me below.",
+  "career_history_title": "Professional career",
+  "career_history_items": [
+    {
+      "organization": "getmykey GmbH",
+      "role": "Technical director, founder",
+      "start_year": 2021,
+      "end_year": 2022,
+      "text": "Holistic responsibility for technical product design and infrastructure for a digitized key and locksmith services start-up",
+      "activities": [
+        "Conception and implementation of cloud-native IT architecture including backend services and web frontend applications",
+        "Implementation of computer-vision-based procedures and tooling for individual key shape recognition",
+        "Implementation of machine-learning-based prototypes and 3D training data generation pipelines for automated key blank recognition"
+      ],
+      "tech_tags": ["react"],
+      "softskill_tags": ["org_building"]
+    },
+    {
+      "organization": "BCG Platinion",
+      "role": "Principal Engineer",
+      "start_year": 2018,
+      "end_year": 2021,
+      "text": "Thought leadership and capability building for a new design and engineering cohort in a global business consulting context spanning various industries",
+      "activities": [
+        "On- and offsite technical consulting and project management in digitization projects for multinational enterprise clients",
+        "Team leadership for a cohort of 30 design and engineering specialists of different technical backgrounds",
+        "Implementation of engineering infrastructure, strategic roadmap and processes, including more than 100 conducted engineering interviews"
+      ],
+      "tech_tags": ["react"],
+      "softskill_tags": ["org_building"]
+    },
+    {
+      "organization": "Iconmobile GmbH",
+      "role": "Lead Android Developer",
+      "start_year": 2016,
+      "end_year": 2018,
+      "text": "Technical team leadership and consulting for IoT development projects for automotive, health and home appliance clients",
+      "activities": [
+        "Team leadership for a cohort of 10 native Android engineers including shaping of processes and best practices for software development",
+        "Hands-on implementation of native Android and full-stack web projects",
+        "Technical consulting and on-site project management for automotive clients"
+      ],
+      "tech_tags": ["react"],
+      "softskill_tags": ["org_building"]
+    },
+    {
+      "organization": "UX Specialist",
+      "role": "Lead Android Developer",
+      "start_year": 2015,
+      "end_year": 2016,
+      "text": "Global technical leadership for a leading publishing software company’s streamlined web frontend applications",
+      "activities": [
+        "Conception of standardized web user interface components",
+        "Optimization of collaboration processes for a remote product team of ten",
+        "Hands-on implementation of features for publishers in the web platform"
+      ],
+      "tech_tags": ["react"],
+      "softskill_tags": ["org_building"]
+    },
+    {
+      "organization": "Unister GmbH",
+      "role": "Senior Android Developer",
+      "start_year": 2014,
+      "end_year": 2015,
+      "text": "Co-leadership for development teams and native Android application development for a leading German travel and flight search",
+      "activities": [
+        "Agile leadership for eight designers, mobile app engineers and QA testers",
+        "Mentoring and technical reviews for junior engineers",
+        "Development of native Android apps like “Fluege.de” and “Ab in den Urlaub” with more than 1.5m total users"
+      ],
+      "tech_tags": ["react"],
+      "softskill_tags": ["org_building"]
+    },
+    {
+      "organization": "YOC AG",
+      "role": "Software Developer",
+      "start_year": 2012,
+      "end_year": 2014,
+      "text": "Team management and development of for a leading mobile adtech company and premium ad network",
+      "activities": [
+        "Technical leadership for a team of six iOS and Android engineers",
+        "Developing a component for rendering display ads in native Android apps"
+      ],
+      "tech_tags": ["react"],
+      "softskill_tags": ["org_building"]
+    },
+    {
+      "organization": "THE BRETTINGHAMS",
+      "role": "Full-Stack Web and Mobile Developer",
+      "start_year": 2011,
+      "end_year": 2012,
+      "text": "Development of web and mobile applications for SME clients",
+      "activities": [
+        "Development of full-stack web apps, native apps and 3D experiences",
+        "Responsible for internal server administration and backup automation"
+      ],
+      "tech_tags": ["react"],
+      "softskill_tags": ["org_building"]
+    }
+  ]
+}
