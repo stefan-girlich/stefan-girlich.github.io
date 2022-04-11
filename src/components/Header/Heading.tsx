@@ -14,3 +14,10 @@ export const H5 = styled.h5`
   font-size: ${({ theme }) => theme.fontSizes.sm};
   font-weight: 400;
 `
+
+export const SectionTitle = styled(H3)`
+  margin-bottom: ${({ theme }) => theme.spacing(2)};
+`
+export const SubsectionTitle = styled(H4)`
+  margin-bottom: ${({ theme }) => theme.spacing(1)};
+`

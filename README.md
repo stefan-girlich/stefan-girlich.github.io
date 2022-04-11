@@ -8,7 +8,6 @@
 
 ## next
 
-- section: education
 - section: what drives me
   - tech
   - ownership
@@ -21,10 +20,11 @@
 
 ## now, but nice to have
 
-- set first item expanded by default
 - webgl background waves
+- little reveal animations
 
 ### later
 
 - Adhere to JSON resume standard
 - right-to-left layout tests
+- limitation: icons not in data.json

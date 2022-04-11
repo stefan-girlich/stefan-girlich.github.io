@@ -123,5 +123,20 @@
       "text": "",
       "activities": []
     }
+  ],
+  "motivation_title": "What drives me",
+  "motivation_items": [
+    {
+      "title": "Technology",
+      "text": "Technology has fascinated me since I was a child. Human-centered user interfaces, home automation, machine learning, gaming, connected mobility, digital art, XR, IoT, ... — they all enable me to understand and hack a complex world."
+    },
+    {
+      "title": "Ownership",
+      "text": "I live and think in projects; and in any of these projects I strive to take on responsibility for achieving and maintaining excellent quality, alone or in a constant exchange with like-minded individuals."
+    },
+    {
+      "title": "Impact",
+      "text": "I want to contribute to a purpose that is aligned with my personal values. On a small scale, this means building convenient user experiences; on a larger scale I want to help solve burning issues like climate change and all forms of social inequality."
+    }
   ]
 }

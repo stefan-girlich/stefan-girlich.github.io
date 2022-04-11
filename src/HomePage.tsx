@@ -6,6 +6,7 @@ import Header from './components/Header/Header'
 import OpenToOpportunitiesNote from './components/OpenToOpportunitiesNote/OpenToOpportunitiesNote'
 
 import data from './config/data.json'
+import Motivation from './components/Motivation/Motivation'
 
 const Button = styled.button`
   background: ${(props) => props.theme.palette.primary.main};
@@ -18,6 +19,7 @@ function HomePage() {
         <OpenToOpportunitiesNote />
       </Header>
 
+      <Motivation />
       <CareerHistory title={data.professional_career_history_title} items={data.professional_career_history_items} />
       <CareerHistory title={data.education_history_title} items={data.education_history_items} />
     </MainContent>

@@ -1,4 +1,4 @@
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- im
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
 
