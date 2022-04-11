@@ -3,8 +3,7 @@ import styled from 'styled-components'
 import { H4 } from '../Header/Heading'
 import Paragraph from '../Paragraph/Paragraph'
 import CareerHistoryTimelineSegment from './CareerHistoryTimelineSegment'
-
-import texts from '../../config/texts.json'
+import ExpandCollapseIndicator from './ExpandCollapseIndicator'
 
 const Root = styled.li`
   display: flex;
@@ -17,8 +16,9 @@ const Content = styled.div`
 
 const Details = styled.div`
   max-height: 500px; // TODO a hack to avoid measuring content height - should be replaced when content is taller
-  transition: max-height 0.5s ease-out;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
   overflow: hidden;
+  opacity: 1;
 `
 
 const TitleRow = styled(H4)`
@@ -27,6 +27,7 @@ const TitleRow = styled(H4)`
   justify-content: space-between;
   align-items: center;
   margin-bottom: ${({ theme }) => theme.spacing(1)};
+  cursor: pointer;
 `
 
 const TitleRowLefthandItems = styled.div`
@@ -42,15 +43,6 @@ const Role = styled.span`
 const Organization = styled.span`
   color: ${({ theme }) => theme.palette.secondary.main};
   font-weight: 300;
-`
-
-const ExpandCollapseButton = styled.button`
-  color: ${({ theme }) => theme.palette.primary.main};
-  border: 0;
-  background: transparent;
-  font-weight: 300;
-  font-size: ${({ theme }) => theme.fontSizes.sm};
-  margin-left: ${({ theme }) => theme.spacing(1)};
 `
 
 const Timespan = styled.div`
@@ -74,11 +66,17 @@ const ActivityListItem = styled(Paragraph)`
   }
 `
 
+const formatTimespan = (startYear: number, endYear: number | null) => {
+  if (endYear === null) return `${startYear} –`
+  if (startYear === endYear) return `${startYear}`
+  return `${startYear} – ${endYear}`
+}
+
 export interface CareerHistoryItem {
-  organization: string
+  organization: string | null
   role: string
   start_year: number
-  end_year: number
+  end_year: number | null
   text: string
   activities: string[]
   tech_tags: string[]
@@ -88,42 +86,43 @@ export interface CareerHistoryItem {
 interface Props {
   data: CareerHistoryItem
   index: number
+  totalItemCount: number
 }
 
-const CareerHistoryListItem = ({ data, index }: Props) => {
+const CareerHistoryListItem = ({ data, index, totalItemCount }: Props) => {
   const [isExpanded, setExpanded] = useState(false)
   const toggle = () => setExpanded(!isExpanded)
+  const hasDetailContent =
+    !!data.text.length || !!data.tech_tags.length || !!data.softskill_tags.length || !!data.activities.length
 
   return (
     <Root>
-      <CareerHistoryTimelineSegment isMostRecent={index === 0} />
+      <CareerHistoryTimelineSegment isMostRecent={index === 0} isOldest={index === totalItemCount - 1} />
 
       <Content>
-        <TitleRow>
+        <TitleRow onClick={toggle}>
           <TitleRowLefthandItems>
             <Role>{data.role}</Role>
-            <Organization>&nbsp;&nbsp;&mdash;&nbsp;&nbsp;{data.organization}</Organization>
-            <ExpandCollapseButton onClick={toggle}>
-              {isExpanded ? texts.show_less : texts.show_more}
-            </ExpandCollapseButton>
+            {data.organization && <Organization>&nbsp;&nbsp;&mdash;&nbsp;&nbsp;{data.organization}</Organization>}
+            {hasDetailContent && <ExpandCollapseIndicator expanded={isExpanded} />}
           </TitleRowLefthandItems>
 
-          <Timespan>
-            {data.start_year} - {data.end_year}
-          </Timespan>
+          <Timespan>{formatTimespan(data.start_year, data.end_year)}</Timespan>
         </TitleRow>
 
-        <Details style={isExpanded ? undefined : { maxHeight: 0 }}>
-          <Paragraph>{data.text}</Paragraph>
+        {hasDetailContent && (
+          <Details style={isExpanded ? undefined : { maxHeight: 0, opacity: 0 }}>
+            <Paragraph>{data.text}</Paragraph>
 
-          <ActivityList>
-            {data.activities.map((activity, activityIndex) => (
-              <ActivityListItem as="li" key={`${index}_${activityIndex}`}>
-                {activity}
-              </ActivityListItem>
-            ))}
-          </ActivityList>
-        </Details>
+            <ActivityList>
+              {data.activities.map((activity, activityIndex) => (
+                <ActivityListItem as="li" key={`${index}_${activityIndex}`}>
+                  {activity}
+                </ActivityListItem>
+              ))}
+            </ActivityList>
+          </Details>
+        )}
       </Content>
     </Root>
   )

@@ -29,14 +29,15 @@ const VerticalLineBottom = styled(VerticalLineTop)`
 
 interface Props {
   isMostRecent?: boolean
+  isOldest?: boolean
 }
 
-const CareerHistoryTimelineSegment = ({ isMostRecent }: Props) => {
+const CareerHistoryTimelineSegment = ({ isMostRecent, isOldest }: Props) => {
   return (
     <Root>
       <VerticalLineTop style={isMostRecent ? { opacity: 0 } : undefined} />
       <Dot />
-      <VerticalLineBottom />
+      <VerticalLineBottom style={isOldest ? { opacity: 0 } : undefined} />
     </Root>
   )
 }

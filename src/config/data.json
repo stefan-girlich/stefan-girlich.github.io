@@ -4,8 +4,8 @@
   "intro_text": "Dedicated IT professional with a deep passion for a broad range of technologies. Over ten years of experience working as an engineer, solution architect and consultant in various organizational contexts and industries.",
   "open_to_opportunities_title": "Open to new opportunities",
   "open_to_opportunities_text": "I am currently searching for a new role. Find out more about me below.",
-  "career_history_title": "Professional career",
-  "career_history_items": [
+  "professional_career_history_title": "Professional career",
+  "professional_career_history_items": [
     {
       "organization": "getmykey GmbH",
       "role": "Technical director, founder",
@@ -101,6 +101,49 @@
       ],
       "tech_tags": ["react"],
       "softskill_tags": ["org_building"]
+    }
+  ],
+  "education_history_title": "Education",
+  "education_history_items": [
+    {
+      "organization": "Beuth Hochschule für Technik Berlin",
+      "role": "Media informatics",
+      "start_year": 2009,
+      "end_year": 2011,
+      "text": "Media informatics studies (B. Sc.) spanning rich-media application development and IT fundamentals, finishing with a bachelor's thesis and Android-based software prototype for a web API for camera-based head position tracking",
+      "activities": [],
+      "tech_tags": [],
+      "softskill_tags": []
+    },
+    {
+      "organization": null,
+      "role": "First personal website",
+      "start_year": 2001,
+      "end_year": 2001,
+      "text": "Essentially an early type of blog capturing my random teenage thoughts, also containing sections for album and PC game reviews and inside jokes at my local school",
+      "activities": [],
+      "tech_tags": [],
+      "softskill_tags": []
+    },
+    {
+      "organization": null,
+      "role": "First PC",
+      "start_year": 1993,
+      "end_year": 1993,
+      "text": "This is how it all began. 16 MHz, 4MB RAM, MS-DOS 5.0, Windows 3.1 — endless fun.",
+      "activities": [],
+      "tech_tags": [],
+      "softskill_tags": []
+    },
+    {
+      "organization": null,
+      "role": "Born",
+      "start_year": 1987,
+      "end_year": 1987,
+      "text": "",
+      "activities": [],
+      "tech_tags": [],
+      "softskill_tags": []
     }
   ]
 }

@@ -18,7 +18,8 @@ function HomePage() {
         <OpenToOpportunitiesNote />
       </Header>
 
-      <CareerHistory title={data.career_history_title} items={data.career_history_items} />
+      <CareerHistory title={data.professional_career_history_title} items={data.professional_career_history_items} />
+      <CareerHistory title={data.education_history_title} items={data.education_history_items} />
     </MainContent>
   )
 }
