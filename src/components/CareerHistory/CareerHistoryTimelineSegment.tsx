@@ -31,7 +31,7 @@ interface Props {
   isMostRecent?: boolean
 }
 
-const CareerHistoryItemIndicator = ({ isMostRecent }: Props) => {
+const CareerHistoryTimelineSegment = ({ isMostRecent }: Props) => {
   return (
     <Root>
       <VerticalLineTop style={isMostRecent ? { opacity: 0 } : undefined} />
@@ -41,4 +41,4 @@ const CareerHistoryItemIndicator = ({ isMostRecent }: Props) => {
   )
 }
 
-export default CareerHistoryItemIndicator
+export default CareerHistoryTimelineSegment
