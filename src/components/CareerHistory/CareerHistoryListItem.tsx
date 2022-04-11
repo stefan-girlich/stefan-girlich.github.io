@@ -6,18 +6,18 @@ import CareerHistoryTimelineSegment from './CareerHistoryTimelineSegment'
 const Root = styled.li`
   display: flex;
   flex-direction: row;
-  /* padding-bottom: ${({ theme }) => theme.spacing(1)}; */
 `
 
 const CareerListItemContent = styled.div`
   flex: 1;
 `
 
-const Row = styled(H4)`
+const TitleRow = styled(H4)`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: ${({ theme }) => theme.spacing(1)};
 `
 
 const Role = styled.span`
@@ -71,7 +71,7 @@ const CareerHistoryListItem = ({ data, index }: Props) => {
       <CareerHistoryTimelineSegment isMostRecent={index === 0} />
 
       <CareerListItemContent>
-        <Row>
+        <TitleRow>
           <div>
             <Role>{data.role}</Role>
             <Organization>&nbsp;&nbsp;&mdash;&nbsp;&nbsp;{data.organization}</Organization>
@@ -80,7 +80,7 @@ const CareerHistoryListItem = ({ data, index }: Props) => {
           <Timespan>
             {data.start_year} - {data.end_year}
           </Timespan>
-        </Row>
+        </TitleRow>
 
         <Paragraph>{data.text}</Paragraph>
 
