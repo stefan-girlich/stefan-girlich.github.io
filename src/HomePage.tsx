@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import CareerHistory from './components/CareerHistory'
-import CenterColumn from './components/CenterColumn'
+import MainContent from './components/MainContent'
 import Header from './components/Header'
 import OpenToOpportunitiesNote from './components/OpenToOpportunitiesNote'
 
@@ -13,13 +13,13 @@ const Button = styled.button`
 
 function HomePage() {
   return (
-    <CenterColumn>
+    <MainContent>
       <Header>
         <OpenToOpportunitiesNote />
       </Header>
 
       <CareerHistory title={data.career_history_title} items={data.career_history_items} />
-    </CenterColumn>
+    </MainContent>
   )
 }
 

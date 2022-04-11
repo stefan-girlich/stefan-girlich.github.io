@@ -1,3 +1,39 @@
+import styled from 'styled-components'
+import { H3, H4 } from './Heading'
+import Paragraph from './Paragraph'
+
+const Root = styled.div`
+  margin-bottom: ${({ theme }) => theme.spacing(3)};
+`
+
+const Item = styled.div`
+  margin-bottom: ${({ theme }) => theme.spacing(5)};
+`
+
+const Row = styled(H4)`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`
+
+const Role = styled.span`
+  /* display: inline-block; */
+`
+const Organization = styled.span`
+  color: ${({ theme }) => theme.palette.secondary.main};
+  font-weight: 300;
+`
+
+const Timespan = styled.div`
+  color: ${({ theme }) => theme.palette.secondary.main};
+  font-weight: 300;
+`
+
+const Activity = styled(Paragraph)`
+  margin-block-end: ${({ theme }) => theme.spacing(1)};
+`
+
 export interface CareerHistoryItem {
   organization: string
   role: string
@@ -16,26 +52,33 @@ interface Props {
 
 const CareerHistory = ({ title, items }: Props) => {
   return (
-    <div>
-      <h3>{title}</h3>
+    <Root>
+      <H3>{title}</H3>
       {items.map((item, index) => (
-        <div key={index}>
-          <h4>{item.organization}</h4>
-          <h4>{item.role}</h4>
-          <h4>
-            {item.start_year} - {item.end_year}
-          </h4>
+        <Item key={index}>
+          <Row>
+            <div>
+              <Role>{item.role}</Role>
+              <Organization>&nbsp;&nbsp;&mdash;&nbsp;&nbsp;{item.organization}</Organization>
+            </div>
 
-          <p>{item.text}</p>
+            <Timespan>
+              {item.start_year} - {item.end_year}
+            </Timespan>
+          </Row>
+
+          <Paragraph>{item.text}</Paragraph>
 
           <ul>
             {item.activities.map((activity, activityIndex) => (
-              <li key={`${index}_${activityIndex}`}>{activity}</li>
+              <Activity as="li" key={`${index}_${activityIndex}`}>
+                {activity}
+              </Activity>
             ))}
           </ul>
-        </div>
+        </Item>
       ))}
-    </div>
+    </Root>
   )
 }
 

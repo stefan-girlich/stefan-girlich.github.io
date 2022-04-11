@@ -1,10 +1,12 @@
 import data from '../config/data.json'
+import { H4 } from './Heading'
+import Paragraph from './Paragraph'
 
 const OpenToOpportunitiesNote = () => {
   return (
     <div>
-      <h3>{data.open_to_opportunities_title}</h3>
-      <p>{data.open_to_opportunities_text}</p>
+      <H4>{data.open_to_opportunities_title}</H4>
+      <Paragraph>{data.open_to_opportunities_text}</Paragraph>
     </div>
   )
 }

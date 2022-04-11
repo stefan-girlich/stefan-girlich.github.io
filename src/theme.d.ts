@@ -6,18 +6,31 @@ declare module 'styled-components' {
       primary: {
         main: string
         contrastText: string
-        dark: string
-        light: string
       }
       secondary: {
         main: string
-        light: string
-        dark: string
+        contrastText: string
+      }
+      tertiary: {
+        main: string
+        contrastText: string
+      }
+      quartary: {
+        main: string
+        contrastText: string
       }
       background: {
-        default: string
+        main: string
+        contrastText: string
       }
     }
     spacing: (factor: number) => string
+    fontSizes: {
+      xl: string
+      lg: string
+      md: string
+      sm: string
+      paragraph: string
+    }
   }
 }

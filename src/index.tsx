@@ -4,6 +4,7 @@ import './index.css'
 import HomePage from './HomePage'
 import reportWebVitals from './reportWebVitals'
 import { ThemeProvider } from 'styled-components'
+import '@fontsource/montserrat/variable.css'
 import theme from './config/theme'
 
 ReactDOM.render(

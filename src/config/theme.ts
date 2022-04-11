@@ -1,23 +1,53 @@
 import { DefaultTheme } from 'styled-components'
 
+// source: https://coolors.co/bfbdc1-6d6a75-37323e-deb841-de9e36
+const COLORS = {
+  GRAY_X_11_GRAY: '#bfbdc1',
+  OLD_LAVENDER: '#6d6a75',
+  BLACK_COFFEE: '#37323e',
+  GOLD_METALLIC: '#deb841',
+  GAMBOGE: '#de9e36',
+}
+
+const CONTRASTS = {
+  GRAY_X_11_GRAY: '#000',
+  OLD_LAVENDER: '#fff',
+  BLACK_COFFEE: '#fff',
+  GOLD_METALLIC: '#000',
+  GAMBOGE: '#000',
+}
+
 export const theme: DefaultTheme = {
   palette: {
     primary: {
-      main: '#00abeb',
-      contrastText: '#ffffff',
-      dark: '#0077B3',
-      light: '#66d5ff',
+      main: COLORS.GOLD_METALLIC,
+      contrastText: CONTRASTS.GOLD_METALLIC,
     },
     secondary: {
-      main: '#384955',
-      light: '#9CAEBC',
-      dark: '#202a31',
+      main: COLORS.GRAY_X_11_GRAY,
+      contrastText: CONTRASTS.GRAY_X_11_GRAY,
+    },
+    tertiary: {
+      main: COLORS.GAMBOGE,
+      contrastText: CONTRASTS.GAMBOGE,
+    },
+    quartary: {
+      main: COLORS.OLD_LAVENDER,
+      contrastText: CONTRASTS.OLD_LAVENDER,
     },
     background: {
-      default: '#F1FBFF',
+      main: COLORS.BLACK_COFFEE,
+      contrastText: CONTRASTS.BLACK_COFFEE,
     },
   },
-  spacing: (factor: number) => `${factor * 4}px`,
+  spacing: (factor: number) => `${factor * 8}px`,
+  fontSizes: {
+    xl: '36px',
+    lg: '26px',
+    md: '20px',
+    sm: '18px',
+    paragraph: '16px',
+  },
 }
 
 export default theme
