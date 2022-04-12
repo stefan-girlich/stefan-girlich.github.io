@@ -32,5 +32,8 @@ declare module 'styled-components/macro' {
       xs: string
       paragraph: string
     }
+    zLayers: {
+      overlay: number
+    }
   }
 }

@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro'
 import SkillSubsectionData from '../../entity/SkillSubsectionData'
 import { SectionTitle } from '../Header/Heading'
+import SkillsLegendButton from '../SkillsLegendButton/SkillsLegendButton'
 import SkillsSubsection from './SkillsSubsection'
 
 const Root = styled.div`
@@ -44,14 +45,18 @@ const splitSubsectionsByColumn = <T extends { column: number }>(items: T[]) => {
 interface Props {
   title: string
   subsections: SkillSubsectionData[]
+  onLegendButtonClick(): void
 }
 
-const Skills = ({ title, subsections }: Props) => {
+const Skills = ({ title, subsections, onLegendButtonClick }: Props) => {
   const subsectionsByCol = splitSubsectionsByColumn(subsections)
 
   return (
     <Root>
-      <SectionTitle>{title}</SectionTitle>
+      <SectionTitle>
+        {title}
+        <SkillsLegendButton onClick={onLegendButtonClick} />
+      </SectionTitle>
       <Content>
         <Col>
           {subsectionsByCol[0].map(({ title, items }, index) => (

@@ -16,6 +16,9 @@ export const H5 = styled.h5`
 `
 
 export const SectionTitle = styled(H3)`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin-bottom: ${({ theme }) => theme.spacing(2)};
 `
 export const SubsectionTitle = styled(H4)`

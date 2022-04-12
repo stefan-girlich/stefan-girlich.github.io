@@ -8,7 +8,6 @@
 
 ## next
 
-- "?" button and explanation overlay for skills sections
 - mobile
 - PDF download
 

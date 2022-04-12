@@ -81,6 +81,9 @@ export const theme: DefaultTheme = {
     xs: '10px',
     paragraph: '16px',
   },
+  zLayers: {
+    overlay: 1000,
+  },
 }
 
 export default theme

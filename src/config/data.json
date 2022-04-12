@@ -139,6 +139,14 @@
       "text": "I want to contribute to a purpose that is aligned with my personal values. On a small scale, this means building convenient user experiences; on a larger scale I want to help solve burning issues like climate change and all forms of social inequality."
     }
   ],
+  "skills_legend_title": "Skill scores",
+  "skills_legend_items": [
+    "High-level theoretical knowledge",
+    "Basic practical experience from online tutorials or personal experiments",
+    "Practical experience from one real-world projectƒ",
+    "Advanced practical experience and mentorship in various settings",
+    "Expert-level hands-on skills as well as mentorship and consulting skills"
+  ],
   "technical_skills_title": "Technical skills",
   "technical_skills_subsections": [
     {

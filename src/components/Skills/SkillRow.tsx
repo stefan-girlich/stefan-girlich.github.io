@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
 import SkillData from '../../entity/SkillData'
-import SkillScore from './SkillScore'
+import SkillScore from '../SkillScore/SkillScore'
 
 const Root = styled.li`
   display: flex;

@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
 
-const Root = styled.p`
+export const Root = styled.p`
   line-height: 1.5;
   margin-top: 0;
   margin-bottom: ${({ theme }) => theme.spacing(1)};
