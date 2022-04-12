@@ -16,6 +16,11 @@ const GlobalStyle = createGlobalStyle`
   html, body {
     background: ${({ theme }) => theme.palette.background.main};
   }
+
+  *::selection {
+    background: ${({ theme }) => theme.palette.primary.main};
+    color: ${({ theme }) => theme.palette.primary.contrastText};
+  }
 `
 
 ReactDOM.render(

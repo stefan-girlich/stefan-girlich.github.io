@@ -16,7 +16,6 @@
 - optimize SEO
 - webgl background waves
 - little reveal animations
-- style text selection
 
 ### later
 
