@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import CareerHistory from './components/CareerHistory/CareerHistory'
 import Contact from './components/Contact/Contact'
 import Goals from './components/Goals/Goals'
@@ -12,14 +12,19 @@ import data from './config/data.json'
 function HomePage() {
   const [isSkillsLegendOpen, setSkillsLegendOpen] = useState(false)
 
+  const contactSectionRef = useRef<HTMLDivElement | null>(null)
+
   const onRequestSkillsLegend = () => setSkillsLegendOpen(true)
   const onRequestCloseSkillsLegend = () => setSkillsLegendOpen(false)
+  const onRequestContact = () => {
+    contactSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
     <>
       <MainContent>
         <Header />
-        <Goals />
+        <Goals onRequestContact={onRequestContact} />
         <Motivation />
         <CareerHistory title={data.professional_career_history_title} items={data.professional_career_history_items} />
         <CareerHistory title={data.education_history_title} items={data.education_history_items} />
@@ -33,7 +38,7 @@ function HomePage() {
           subsections={data.management_skills_subsections}
           onLegendButtonClick={onRequestSkillsLegend}
         />
-        <Contact />
+        <Contact elementRef={contactSectionRef} />
       </MainContent>
       <SkillsLegendOverlay open={isSkillsLegendOpen} onCloseClick={onRequestCloseSkillsLegend} />
     </>

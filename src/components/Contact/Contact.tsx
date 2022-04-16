@@ -1,5 +1,6 @@
 import { brands, solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { MutableRefObject } from 'react'
 import styled from 'styled-components/macro'
 import data from '../../config/data.json'
 import { SectionTitle } from '../Header/Heading'
@@ -20,9 +21,13 @@ const ButtonsContainer = styled.div`
   margin-top: ${({ theme }) => theme.spacing(3)};
 `
 
-const Contact = () => {
+interface Props {
+  elementRef: MutableRefObject<HTMLDivElement | null>
+}
+
+const Contact = ({ elementRef }: Props) => {
   return (
-    <Root>
+    <Root ref={elementRef}>
       <SectionTitle>{data.contact_title}</SectionTitle>
       <RichTextParagraph>{data.contact_text}</RichTextParagraph>
       <ButtonsContainer>

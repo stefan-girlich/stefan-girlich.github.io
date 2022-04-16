@@ -47,7 +47,7 @@ interface Props {
 
 const CallToActionButton = ({ onClick }: Props) => {
   return (
-    <Root>
+    <Root onClick={onClick}>
       <IconContainer>
         <FontAwesomeIcon className="fa-2x" icon={solid('arrow-right')} />
       </IconContainer>

@@ -12,14 +12,16 @@ const Text = styled(Paragraph)`
   margin-bottom: ${({ theme }) => theme.spacing(2)};
 `
 
-const Goals = () => {
-  const onButtonClick = () => {}
+interface Props {
+  onRequestContact(): void
+}
 
+const Goals = ({ onRequestContact }: Props) => {
   return (
     <Root>
       <SectionTitle>{data.goals_title}</SectionTitle>
       <Text>{data.goals_text}</Text>
-      <CallToActionButton onClick={onButtonClick} />
+      <CallToActionButton onClick={onRequestContact} />
     </Root>
   )
 }
