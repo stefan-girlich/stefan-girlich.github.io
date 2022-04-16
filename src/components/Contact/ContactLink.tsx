@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import styled, { useTheme } from 'styled-components/macro'
 import { BrandColorSets } from '../../theme'
 
@@ -9,26 +10,22 @@ const Root = styled.a`
   text-decoration: none;
   padding: ${({ theme }) => theme.spacing(1)} ${({ theme }) => theme.spacing(1.5)};
   cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  transition: background-color 0.1s ease-in-out;
 
   * {
     cursor: pointer;
   }
 
-  transition: padding 0.1s ease-in-out;
   svg {
-    transition: transform 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out, color 0.1s ease-in-out;
   }
 
   :hover {
-    padding: ${({ theme }) => theme.spacing(1)} ${({ theme }) => theme.spacing(3)};
-
     svg {
-      transform: scale(1.05);
+      transform: scale(1.1);
     }
-  }
-
-  :not(:hover) {
-    background: transparent;
   }
 `
 
@@ -37,6 +34,7 @@ const Label = styled.span`
   font-size: ${({ theme }) => theme.fontSizes.paragraph};
   font-weight: 400;
   margin-left: ${({ theme }) => theme.spacing(2)};
+  transition: color 0.1s ease-in-out;
 `
 
 interface Props {
@@ -47,13 +45,27 @@ interface Props {
 }
 
 const ContactLink = ({ label, url, type, icon }: Props) => {
+  const [isHovering, setHovering] = useState(false)
+
+  const enableHover = () => setHovering(true)
+  const disableHover = () => setHovering(false)
+
   const theme = useTheme()
   const brandColorSet = theme.palette.brands[type as keyof BrandColorSets]
-  const backgroundStyle = { background: brandColorSet.main, color: brandColorSet.contrastText }
+  const rootStyle = isHovering
+    ? { borderColor: brandColorSet.main, color: brandColorSet.contrastText, backgroundColor: brandColorSet.main }
+    : { borderColor: brandColorSet.main, color: brandColorSet.main }
+  const labelStyle = isHovering ? { color: 'inherit' } : { color: theme.palette.background.contrastText }
   return (
-    <Root href={url} target={type === 'email' ? undefined : '_blank'} style={backgroundStyle}>
+    <Root
+      href={url}
+      target={type === 'email' ? undefined : '_blank'}
+      style={rootStyle}
+      onMouseEnter={enableHover}
+      onMouseLeave={disableHover}
+    >
       {icon}
-      <Label>{label}</Label>
+      <Label style={labelStyle}>{label}</Label>
     </Root>
   )
 }
