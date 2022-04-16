@@ -10,10 +10,6 @@ export const H4 = styled.h4`
   margin-block-start: ${({ theme }) => theme.spacing(2)};
   margin-block-end: ${({ theme }) => theme.spacing(2)};
 `
-export const H5 = styled.h5`
-  font-size: ${({ theme }) => theme.fontSizes.sm};
-  font-weight: 400;
-`
 
 export const SectionTitle = styled(H3)`
   display: flex;

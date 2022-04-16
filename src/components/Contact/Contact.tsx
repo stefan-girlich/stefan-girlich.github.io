@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components/macro'
 import data from '../../config/data.json'
 import { SectionTitle } from '../Header/Heading'
-import Paragraph from '../Paragraph/Paragraph'
+import { RichTextParagraph } from '../Paragraph/Paragraph'
 import ContactLink from './ContactLink'
 
 // TODO make icons configurable via data.json
@@ -24,7 +24,7 @@ const Contact = () => {
   return (
     <Root>
       <SectionTitle>{data.contact_title}</SectionTitle>
-      <Paragraph>{data.contact_text}</Paragraph>
+      <RichTextParagraph>{data.contact_text}</RichTextParagraph>
       <ButtonsContainer>
         {data.contact_links.map(({ label, url, type }, index) => (
           <ContactLink

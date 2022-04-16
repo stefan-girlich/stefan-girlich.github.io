@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components/macro'
 import data from '../../config/data.json'
 import { SectionTitle } from '../Header/Heading'
-import { Root as ParagraphRoot } from '../Paragraph/Paragraph'
+import Paragraph from '../Paragraph/Paragraph'
 import SkillScore from '../SkillScore/SkillScore'
 
 const Root = styled.div`
@@ -82,7 +82,7 @@ const ScoreContainer = styled.div`
   margin-top: 9px;
 `
 
-const LegendItemText = styled(ParagraphRoot)`
+const LegendItemText = styled(Paragraph)`
   margin-left: ${({ theme }) => theme.spacing(4)};
   margin-bottom: 0;
 `

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components/macro'
 import { H4 } from '../Header/Heading'
-import Paragraph from '../Paragraph/Paragraph'
+import RichTextParagraph from '../Paragraph/Paragraph'
 import CareerHistoryTimelineSegment from './CareerHistoryTimelineSegment'
 import ExpandCollapseIndicator from './ExpandCollapseIndicator'
 
@@ -60,7 +60,7 @@ const ActivityList = styled.ul`
   margin-bottom: ${({ theme }) => theme.spacing(3)};
 `
 
-const ActivityListItem = styled(Paragraph)`
+const ActivityListItem = styled(RichTextParagraph)`
   margin-left: ${({ theme }) => theme.spacing(5)};
   margin-bottom: ${({ theme }) => theme.spacing(1)};
   padding-left: ${({ theme }) => theme.spacing(1)};
@@ -114,7 +114,7 @@ const CareerHistoryListItem = ({ data, index, totalItemCount }: Props) => {
 
         {hasDetailContent && (
           <Details style={isExpanded ? undefined : { maxHeight: 0, opacity: 0 }}>
-            <Paragraph>{data.text}</Paragraph>
+            <RichTextParagraph>{data.text}</RichTextParagraph>
 
             {!!data.activities.length && (
               <ActivityList>

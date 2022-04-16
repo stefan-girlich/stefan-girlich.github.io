@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
 
-export const Root = styled.p`
+const Paragraph = styled.p`
   line-height: 1.5;
   margin-top: 0;
   margin-bottom: ${({ theme }) => theme.spacing(1)};
@@ -21,11 +21,10 @@ export const Root = styled.p`
     border-bottom-width: 0px;
   }
 `
+export default Paragraph
 
 interface Props {
   children: string
 }
 
-const Paragraph = ({ children }: Props) => <Root dangerouslySetInnerHTML={{ __html: children }} />
-
-export default Paragraph
+export const RichTextParagraph = ({ children }: Props) => <Paragraph dangerouslySetInnerHTML={{ __html: children }} />

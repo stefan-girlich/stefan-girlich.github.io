@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
 import data from '../../config/data.json'
-import Paragraph from '../Paragraph/Paragraph'
+import RichTextParagraph from '../Paragraph/Paragraph'
 
 const Root = styled.header`
   margin-top: ${({ theme }) => theme.spacing(6)};
@@ -25,11 +25,7 @@ const Subtitle = styled.h1`
   font-size: ${({ theme }) => theme.fontSizes.md};
 `
 
-interface Props {
-  children?: React.ReactNode
-}
-
-const Header = ({ children }: Props) => {
+const Header = () => {
   return (
     <Root>
       <TitleRow>
@@ -37,9 +33,7 @@ const Header = ({ children }: Props) => {
         <Subtitle>{data.subtitle}</Subtitle>
       </TitleRow>
 
-      <Paragraph>{data.intro_text}</Paragraph>
-
-      {children && <div>{children}</div>}
+      <RichTextParagraph>{data.intro_text}</RichTextParagraph>
     </Root>
   )
 }

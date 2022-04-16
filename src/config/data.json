@@ -2,8 +2,9 @@
   "title": "stefan.girlich",
   "subtitle": "Tech enthusiast | Engineer | IT consultant",
   "intro_text": "Dedicated IT professional with a deep passion for a broad range of technologies. Over ten years of experience working as an engineer, solution architect and consultant in various organizational contexts and industries.",
-  "open_to_opportunities_title": "Open to new opportunities",
-  "open_to_opportunities_text": "I am currently searching for a new role. Find out more about me below.",
+  "goals_title": "What I am looking for",
+  "goals_text": "I am looking for a long-term full-time position as a Founding Tech Lead or Head of Engineering in the Berlin startup space. It is my ambition to build an excellent team of engineers and designers to solve a real-world problem using state-of-the-art technology.",
+  "goals_button_label": "Get in touch",
   "professional_career_history_title": "Professional career",
   "professional_career_history_items": [
     {
@@ -182,11 +183,6 @@
           "score": 3
         },
         {
-          "name": "Keras",
-          "score": 3
-        },
-
-        {
           "name": "Keras, Tensorflow",
           "score": 3
         },
@@ -243,10 +239,6 @@
         {
           "name": "Python",
           "score": 4
-        },
-        {
-          "name": "C#",
-          "score": 3
         },
         {
           "name": "BASH",

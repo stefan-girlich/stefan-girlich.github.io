@@ -15,7 +15,6 @@ const Root = styled.a`
   }
 
   transition: padding 0.1s ease-in-out;
-  transform: scale(1);
   svg {
     transition: transform 0.1s ease-in-out;
   }
@@ -53,7 +52,6 @@ const ContactLink = ({ label, url, type, icon }: Props) => {
   const backgroundStyle = { background: brandColorSet.main, color: brandColorSet.contrastText }
   return (
     <Root href={url} target={type === 'email' ? undefined : '_blank'} style={backgroundStyle}>
-      {/* <IconContainer>{icon}</IconContainer> */}
       {icon}
       <Label>{label}</Label>
     </Root>
