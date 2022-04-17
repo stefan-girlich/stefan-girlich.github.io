@@ -144,7 +144,7 @@
   "skills_legend_items": [
     "High-level theoretical knowledge",
     "Basic practical experience from online tutorials or personal experiments",
-    "Practical experience from one real-world projectƒ",
+    "Practical experience from one real-world project",
     "Advanced practical experience and mentorship in various settings",
     "Expert-level hands-on skills as well as mentorship and consulting skills"
   ],
@@ -385,7 +385,7 @@
     }
   ],
   "contact_title": "Contact",
-  "contact_text": "Feel free to get in touch! I'm always happy to hear about new opportunities, talk tech or receive feedback about this website. The codebase for this website is open source and you're free to use it; see the <a href='https://github.com/stefan-girlich/stefan-girlich.github.io' target='_blank'>GitHub repository</a> for more information.",
+  "contact_text": "Feel free to get in touch! I'm always happy to hear about new opportunities, talk tech or receive feedback about this website. The codebase for this website is open source and you're free to use it; see the <a href='https://github.com/stefan-girlich/stefan-girlich.github.io' target='_blank'>GitHub&nbsp;repository</a> for more information.",
   "contact_links": [
     {
       "label": "Email",

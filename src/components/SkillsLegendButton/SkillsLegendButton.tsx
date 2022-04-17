@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components/macro'
 
 const Root = styled.a`
+  flex-shrink: 0;
   display: inline-block;
   border-width: 1px;
   border-style: solid;

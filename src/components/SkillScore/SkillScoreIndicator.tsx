@@ -1,6 +1,6 @@
 import styled, { useTheme } from 'styled-components/macro'
 
-const SIZE = 5
+export const SIZE = 5
 
 const Root = styled.div`
   width: ${SIZE}px;

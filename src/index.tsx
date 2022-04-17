@@ -7,10 +7,12 @@ import reportWebVitals from './reportWebVitals'
 import { createGlobalStyle, ThemeProvider } from 'styled-components/macro'
 import '@fontsource/montserrat/variable.css'
 import theme from './config/theme'
+import { transparentize } from 'polished'
 
 const GlobalStyle = createGlobalStyle`
   * {
     cursor: default;
+    -webkit-tap-highlight-color: ${({ theme }) => transparentize(0.75, theme.palette.primary.main)};
   }
 
   html, body {

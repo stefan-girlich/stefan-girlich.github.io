@@ -28,7 +28,12 @@ const TitleRow = styled(H4)`
   align-items: center;
   margin-top: ${({ theme }) => theme.spacing(1.5)};
   margin-bottom: ${({ theme }) => theme.spacing(1)};
+  font-size: ${({ theme }) => theme.fontSize('md')};
   cursor: pointer;
+
+  ${({ theme }) => theme.media('tablet')} {
+    align-items: flex-start;
+  }
 
   *  {
     cursor: pointer;
@@ -40,20 +45,62 @@ const TitleRowLefthandItems = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  ${({ theme }) => theme.media('tablet')} {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
 
-const Role = styled.span`
-  /* display: inline-block; */
-`
+const Role = styled.span``
 const Organization = styled.span`
   color: ${({ theme }) => theme.palette.secondary.main};
   font-weight: 300;
+
+  ${({ theme }) => theme.media('tablet')} {
+    margin-top: ${({ theme }) => theme.spacing(1)};
+  }
+
+  &::before {
+    content: '\u00A0\u00A0\u2014\u00A0\u00A0';
+
+    ${({ theme }) => theme.media('tablet')} {
+      content: '';
+    }
+  }
 `
 
 const Timespan = styled.div`
   color: ${({ theme }) => theme.palette.secondary.main};
   font-weight: 300;
-  font-size: ${({ theme }) => theme.fontSizes.sm};
+  font-size: ${({ theme }) => theme.fontSize('sm')};
+  line-height: ${({ theme }) => theme.fontSize('md')};
+  white-space: nowrap;
+`
+
+const BaseExpandCollapseIndicator = styled(ExpandCollapseIndicator)`
+  display: none;
+`
+
+const DesktopExpandCollapseIndicator = styled(BaseExpandCollapseIndicator)`
+  ${({ theme }) => theme.media('tablet', 'min')} {
+    display: block;
+
+    svg {
+      margin-top: 1px;
+    }
+  }
+`
+
+const MobileExpandCollapseIndicator = styled(BaseExpandCollapseIndicator)`
+  ${({ theme }) => theme.media('tablet')} {
+    display: inline-block;
+    margin-left: ${({ theme }) => theme.spacing(1.5)};
+
+    svg {
+      margin-bottom: 1px;
+    }
+  }
 `
 
 const ActivityList = styled.ul`
@@ -74,7 +121,7 @@ const ActivityListItem = styled(RichTextParagraph)`
 const formatTimespan = (startYear: number, endYear: number | null) => {
   if (endYear === null) return `${startYear} –`
   if (startYear === endYear) return `${startYear}`
-  return `${startYear} – ${endYear}`
+  return `${startYear}\u00A0–\u00A0${endYear}`
 }
 
 export interface CareerHistoryItem {
@@ -104,9 +151,12 @@ const CareerHistoryListItem = ({ data, index, totalItemCount }: Props) => {
       <Content>
         <TitleRow onClick={toggle}>
           <TitleRowLefthandItems>
-            <Role>{data.role}</Role>
-            {data.organization && <Organization>&nbsp;&nbsp;&mdash;&nbsp;&nbsp;{data.organization}</Organization>}
-            {hasDetailContent && <ExpandCollapseIndicator expanded={isExpanded} />}
+            <Role>
+              {data.role}
+              {hasDetailContent && <MobileExpandCollapseIndicator expanded={isExpanded} />}
+            </Role>
+            {data.organization && <Organization>{data.organization}</Organization>}
+            {hasDetailContent && <DesktopExpandCollapseIndicator expanded={isExpanded} />}
           </TitleRowLefthandItems>
 
           <Timespan>{formatTimespan(data.start_year, data.end_year)}</Timespan>

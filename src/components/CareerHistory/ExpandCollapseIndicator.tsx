@@ -7,7 +7,7 @@ const Root = styled.div`
   border: 0;
   background: transparent;
   font-weight: 300;
-  font-size: ${({ theme }) => theme.fontSizes.sm};
+  font-size: ${({ theme }) => theme.fontSize('sm')};
   margin-left: ${({ theme }) => theme.spacing(2)};
 `
 
@@ -18,11 +18,12 @@ const AnimationContainer = styled.div`
 
 interface Props {
   expanded: boolean
+  className?: string
 }
 
-const ExpandCollapseIndicator = ({ expanded }: Props) => {
+const ExpandCollapseIndicator = ({ expanded, className }: Props) => {
   return (
-    <Root>
+    <Root className={className}>
       <AnimationContainer style={expanded ? { transform: 'rotate(90deg)' } : undefined}>
         <FontAwesomeIcon icon={solid('angle-right')} />
       </AnimationContainer>

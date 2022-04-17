@@ -14,13 +14,15 @@ const Content = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing(5)};
 `
 
-const Col = styled.div`
+const Column = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding-right: ${({ theme }) => theme.spacing(5)};
-  margin: 0 ${({ theme }) => theme.spacing(7)};
+  margin: 0 ${({ theme }) => theme.spacing(12)};
+
+  ${({ theme }) => theme.media('tablet')} {
+    margin: 0 ${({ theme }) => theme.spacing(3)};
+  }
 
   &:first-child {
     margin-left: 0;
@@ -58,16 +60,16 @@ const Skills = ({ title, subsections, onLegendButtonClick }: Props) => {
         <SkillsLegendButton onClick={onLegendButtonClick} />
       </SectionTitle>
       <Content>
-        <Col>
+        <Column>
           {subsectionsByCol[0].map(({ title, items }, index) => (
             <SkillsSubsection title={title} skills={items} key={index} />
           ))}
-        </Col>
-        <Col>
+        </Column>
+        <Column>
           {subsectionsByCol[1].map(({ title, items }, index) => (
             <SkillsSubsection title={title} skills={items} key={index} />
           ))}
-        </Col>
+        </Column>
       </Content>
     </Root>
   )

@@ -15,10 +15,19 @@ const Root = styled.div`
 `
 
 const ButtonsContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: ${({ theme }) => theme.spacing(1.5)};
   margin-top: ${({ theme }) => theme.spacing(3)};
+
+  ${({ theme }) => theme.media('tablet', 'min')} {
+    display: flex;
+    flex-direction: row;
+    gap: ${({ theme }) => theme.spacing(1.5)};
+  }
+
+  ${({ theme }) => theme.media('tablet')} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: ${({ theme }) => theme.spacing(1.5)};
+  }
 `
 
 interface Props {

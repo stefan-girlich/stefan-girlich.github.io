@@ -7,13 +7,17 @@ interface Props {
 const Root = styled.div`
   padding-top: 1px; /* to fix margin collapsing */
   padding-bottom: 1px; /* to fix margin collapsing */
-  background: ${(props) => props.theme.palette.background.main};
-  color: ${(props) => props.theme.palette.background.contrastText};
+  background: ${({ theme }) => theme.palette.background.main};
+  color: ${({ theme }) => theme.palette.background.contrastText};
 `
 
 const CenterColumn = styled.div`
   max-width: 800px;
   margin: 0 auto;
+
+  ${({ theme }) => theme.media('tablet')} {
+    max-width: 440px;
+  }
 `
 
 const MainContent = ({ children }: Props) => {

@@ -13,6 +13,10 @@ interface BrandColorSets {
   soundcloud: ColorSet
 }
 
+type Breakpoint = 'mobile' | 'tablet' | 'desktop'
+type BreakpointMode = 'min' | 'max'
+type FontSize = 'xl' | 'lg' | 'md' | 'sm' | 'xs' | 'paragraph'
+
 declare module 'styled-components/macro' {
   export interface DefaultTheme {
     palette: {
@@ -24,16 +28,12 @@ declare module 'styled-components/macro' {
       brands: BrandColorSets
     }
     spacing: (factor: number) => string
-    fontSizes: {
-      xl: string
-      lg: string
-      md: string
-      sm: string
-      xs: string
-      paragraph: string
-    }
+    fontSize: (size: FontSize) => string
+    fontSizeRaw: (size: FontSize) => number
     zLayers: {
       overlay: number
     }
+    media: (breakpoint: Breakpoint, mode?: BreakpointMode) => string
+    matchMedia: (breakpoint: Breakpoint, mode?: BreakpointMode) => boolean
   }
 }

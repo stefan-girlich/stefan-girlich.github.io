@@ -35,7 +35,7 @@ const Root = styled.button`
 
 const Label = styled.span`
   flex: 1;
-  font-size: ${({ theme }) => theme.fontSizes.paragraph};
+  font-size: ${({ theme }) => theme.fontSize('paragraph')};
   font-family: inherit;
   font-weight: 600;
   /* margin-left: ${({ theme }) => theme.spacing(2)}; */

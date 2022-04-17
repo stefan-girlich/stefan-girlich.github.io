@@ -14,6 +14,10 @@ const Root = styled.a`
   border-style: solid;
   transition: background-color 0.1s ease-in-out;
 
+  ${({ theme }) => theme.media('tablet')} {
+    margin-bottom: ${({ theme }) => theme.spacing(1.5)};
+  }
+
   * {
     cursor: pointer;
   }
@@ -31,7 +35,7 @@ const Root = styled.a`
 
 const Label = styled.span`
   flex: 1;
-  font-size: ${({ theme }) => theme.fontSizes.paragraph};
+  font-size: ${({ theme }) => theme.fontSize('paragraph')};
   font-weight: 400;
   margin-left: ${({ theme }) => theme.spacing(2)};
   transition: color 0.1s ease-in-out;
@@ -45,17 +49,21 @@ interface Props {
 }
 
 const ContactLink = ({ label, url, type, icon }: Props) => {
+  const theme = useTheme()
   const [isHovering, setHovering] = useState(false)
+
+  const isTabletOrSmaller = theme.matchMedia('tablet')
 
   const enableHover = () => setHovering(true)
   const disableHover = () => setHovering(false)
 
-  const theme = useTheme()
   const brandColorSet = theme.palette.brands[type as keyof BrandColorSets]
-  const rootStyle = isHovering
-    ? { borderColor: brandColorSet.main, color: brandColorSet.contrastText, backgroundColor: brandColorSet.main }
-    : { borderColor: brandColorSet.main, color: brandColorSet.main }
-  const labelStyle = isHovering ? { color: 'inherit' } : { color: theme.palette.background.contrastText }
+  const rootStyle =
+    isHovering || isTabletOrSmaller
+      ? { borderColor: brandColorSet.main, color: brandColorSet.contrastText, backgroundColor: brandColorSet.main }
+      : { borderColor: brandColorSet.main, color: brandColorSet.main }
+  const labelStyle =
+    isHovering || isTabletOrSmaller ? { color: 'inherit' } : { color: theme.palette.background.contrastText }
   return (
     <Root
       href={url}

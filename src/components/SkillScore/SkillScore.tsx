@@ -10,12 +10,13 @@ const Root = styled.div`
 
 interface Props {
   value: number
+  className?: string
 }
 
-const SkillScore = ({ value }: Props) => {
+const SkillScore = ({ value, className }: Props) => {
   const isLearning = value <= 2
   return (
-    <Root>
+    <Root className={className}>
       {[...Array(MAX_SKILL_SCORE)].map((_, i) => (
         <SkillScoreIndicator filled={i + 1 <= value} learning={isLearning} key={i} />
       ))}

@@ -24,6 +24,10 @@ const IconContainer = styled.div`
   text-align: center;
   width: 96px;
   color: ${({ theme }) => theme.palette.tertiary.main};
+
+  ${({ theme }) => theme.media('tablet')} {
+    width: 48px;
+  }
 `
 
 const Text = styled(Paragraph)`

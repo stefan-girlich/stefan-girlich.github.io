@@ -11,7 +11,7 @@ const SkillsSubsectionTitle = styled(SubsectionTitle)`
 `
 
 const SkillsList = styled.ul`
-  margin-bottom: ${({ theme }) => theme.spacing(3)};
+  margin-bottom: ${({ theme }) => theme.spacing(4)};
 `
 
 interface Props {

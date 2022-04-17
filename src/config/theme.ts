@@ -1,4 +1,5 @@
 import { DefaultTheme } from 'styled-components/macro'
+import { Breakpoint, FontSize } from '../theme'
 
 // source: https://coolors.co/bfbdc1-6d6a75-37323e-deb841-de9e36
 const COLORS = {
@@ -28,6 +29,21 @@ const BRAND_CONTRASTS = {
   LINKEDIN: '#fff',
   GITHUB: '#161b21',
   SOUNDCLOUD: '#fff',
+}
+
+const FONT_SIZES_PX: Record<FontSize, number> = {
+  xl: 36,
+  lg: 26,
+  md: 20,
+  sm: 14,
+  xs: 10,
+  paragraph: 16,
+}
+
+const BREAKPOINT_WIDTHS: Record<Breakpoint, number> = {
+  mobile: 480,
+  tablet: 960,
+  desktop: 3840,
 }
 
 export const theme: DefaultTheme = {
@@ -73,17 +89,15 @@ export const theme: DefaultTheme = {
     },
   },
   spacing: (factor: number) => `${factor * 8}px`,
-  fontSizes: {
-    xl: '36px',
-    lg: '26px',
-    md: '20px',
-    sm: '14px',
-    xs: '10px',
-    paragraph: '16px',
-  },
+  fontSize: (size: FontSize) => `${FONT_SIZES_PX[size]}px`,
+  fontSizeRaw: (size: FontSize) => FONT_SIZES_PX[size],
   zLayers: {
     overlay: 1000,
   },
+  media: (breakpoint: Breakpoint, mode = 'max') =>
+    `@media (${mode === 'max' ? 'max-width' : 'min-width'}: ${BREAKPOINT_WIDTHS[breakpoint]}px)`,
+  matchMedia: (breakpoint: Breakpoint, mode = 'max') =>
+    window.matchMedia(`(${mode === 'max' ? 'max-width' : 'min-width'}: ${BREAKPOINT_WIDTHS[breakpoint]}px)`).matches,
 }
 
 export default theme
