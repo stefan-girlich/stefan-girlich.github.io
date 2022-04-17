@@ -9,6 +9,9 @@ import '@fontsource/montserrat/variable.css'
 import theme from './config/theme'
 import { transparentize } from 'polished'
 
+export const IS_TOUCH_DEVICE =
+  'ontouchstart' in window || navigator.maxTouchPoints > 0 || (navigator as any).msMaxTouchPoints > 0
+
 const GlobalStyle = createGlobalStyle`
   * {
     cursor: default;

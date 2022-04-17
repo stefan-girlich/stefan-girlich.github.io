@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import styled, { useTheme } from 'styled-components/macro'
+import { IS_TOUCH_DEVICE } from '../../index'
 import { BrandColorSets } from '../../theme'
 
 const Root = styled.a`
@@ -52,18 +53,16 @@ const ContactLink = ({ label, url, type, icon }: Props) => {
   const theme = useTheme()
   const [isHovering, setHovering] = useState(false)
 
-  const isTabletOrSmaller = theme.matchMedia('tablet')
-
   const enableHover = () => setHovering(true)
   const disableHover = () => setHovering(false)
 
   const brandColorSet = theme.palette.brands[type as keyof BrandColorSets]
   const rootStyle =
-    isHovering || isTabletOrSmaller
+    isHovering || IS_TOUCH_DEVICE
       ? { borderColor: brandColorSet.main, color: brandColorSet.contrastText, backgroundColor: brandColorSet.main }
       : { borderColor: brandColorSet.main, color: brandColorSet.main }
   const labelStyle =
-    isHovering || isTabletOrSmaller ? { color: 'inherit' } : { color: theme.palette.background.contrastText }
+    isHovering || IS_TOUCH_DEVICE ? { color: 'inherit' } : { color: theme.palette.background.contrastText }
   return (
     <Root
       href={url}

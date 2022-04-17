@@ -1,6 +1,7 @@
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components/macro'
+import { IS_TOUCH_DEVICE } from '../..'
 import data from '../../config/data.json'
 
 const IconContainer = styled.div`
@@ -16,7 +17,7 @@ const Root = styled.button`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: ${({ theme }) => theme.spacing(0.5)} ${({ theme }) => theme.spacing(2)};
+  padding: ${({ theme }) => theme.spacing(0.5)} ${({ theme }) => theme.spacing(1.5)};
   font-family: inherit;
   border: 0;
   background-color: ${({ theme }) => theme.palette.primary.main};
@@ -26,7 +27,7 @@ const Root = styled.button`
     cursor: pointer;
   }
 
-  &:hover ${IconContainer} {
+  &:hover ${IconContainer}, &.active ${IconContainer} {
     width: 32px;
     opacity: 1;
     transform: translateX(0);
@@ -38,7 +39,6 @@ const Label = styled.span`
   font-size: ${({ theme }) => theme.fontSize('paragraph')};
   font-family: inherit;
   font-weight: 600;
-  /* margin-left: ${({ theme }) => theme.spacing(2)}; */
 `
 
 interface Props {
@@ -47,7 +47,7 @@ interface Props {
 
 const CallToActionButton = ({ onClick }: Props) => {
   return (
-    <Root onClick={onClick}>
+    <Root onClick={onClick} className={IS_TOUCH_DEVICE ? 'active' : undefined}>
       <IconContainer>
         <FontAwesomeIcon className="fa-2x" icon={solid('arrow-right')} />
       </IconContainer>

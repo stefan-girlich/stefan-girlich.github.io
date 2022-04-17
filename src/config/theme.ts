@@ -96,8 +96,6 @@ export const theme: DefaultTheme = {
   },
   media: (breakpoint: Breakpoint, mode = 'max') =>
     `@media (${mode === 'max' ? 'max-width' : 'min-width'}: ${BREAKPOINT_WIDTHS[breakpoint]}px)`,
-  matchMedia: (breakpoint: Breakpoint, mode = 'max') =>
-    window.matchMedia(`(${mode === 'max' ? 'max-width' : 'min-width'}: ${BREAKPOINT_WIDTHS[breakpoint]}px)`).matches,
 }
 
 export default theme

@@ -34,6 +34,5 @@ declare module 'styled-components/macro' {
       overlay: number
     }
     media: (breakpoint: Breakpoint, mode?: BreakpointMode) => string
-    matchMedia: (breakpoint: Breakpoint, mode?: BreakpointMode) => boolean
   }
 }
