@@ -34,6 +34,13 @@ const Root = styled.a`
   }
 `
 
+const IconContainer = styled.span`
+  ${({ theme }) => theme.media('tablet')} {
+    width: 24px;
+    text-align: center;
+  }
+`
+
 const Label = styled.span`
   flex: 1;
   font-size: ${({ theme }) => theme.fontSize('paragraph')};
@@ -71,7 +78,7 @@ const ContactLink = ({ label, url, type, icon }: Props) => {
       onMouseEnter={enableHover}
       onMouseLeave={disableHover}
     >
-      {icon}
+      <IconContainer>{icon}</IconContainer>
       <Label style={labelStyle}>{label}</Label>
     </Root>
   )
