@@ -10,7 +10,6 @@
 
 ## now, but nice to have
 
-- optimize SEO
 - webgl background waves
 - little reveal animations
 
