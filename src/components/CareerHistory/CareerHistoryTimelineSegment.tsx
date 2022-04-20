@@ -24,6 +24,10 @@ const VerticalLineTop = styled.div`
   width: 0;
   height: 19.5px;
   border-left: 1px dashed ${({ theme }) => theme.palette.quartary.main};
+
+  ${({ theme }) => theme.media('tablet')} {
+    height: 15.2px;
+  }
 `
 
 const VerticalLineBottom = styled(VerticalLineTop)`
