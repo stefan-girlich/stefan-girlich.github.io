@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.f60f6eaa.css",
-    "main.js": "/static/js/main.6283d206.js",
-    "static/js/787.4aa6ed85.chunk.js": "/static/js/787.4aa6ed85.chunk.js",
-    "static/media/montserrat-latin-variable-wghtOnly-normal.woff2": "/static/media/montserrat-latin-variable-wghtOnly-normal.ab0af27f0deddae417c1.woff2",
-    "static/media/montserrat-latin-ext-variable-wghtOnly-normal.woff2": "/static/media/montserrat-latin-ext-variable-wghtOnly-normal.f43b28e21eae47d6a265.woff2",
-    "static/media/montserrat-cyrillic-ext-variable-wghtOnly-normal.woff2": "/static/media/montserrat-cyrillic-ext-variable-wghtOnly-normal.e055b659dda93097b83e.woff2",
-    "static/media/montserrat-cyrillic-variable-wghtOnly-normal.woff2": "/static/media/montserrat-cyrillic-variable-wghtOnly-normal.53b27588d318b7fa2f0c.woff2",
-    "static/media/montserrat-vietnamese-variable-wghtOnly-normal.woff2": "/static/media/montserrat-vietnamese-variable-wghtOnly-normal.5c770f2a958918627f2d.woff2",
-    "index.html": "/index.html",
-    "main.f60f6eaa.css.map": "/static/css/main.f60f6eaa.css.map",
-    "main.6283d206.js.map": "/static/js/main.6283d206.js.map",
-    "787.4aa6ed85.chunk.js.map": "/static/js/787.4aa6ed85.chunk.js.map"
+    "main.css": "/stefan-girlich.github.io/static/css/main.32538bd6.css",
+    "main.js": "/stefan-girlich.github.io/static/js/main.062e5aad.js",
+    "static/js/787.4aa6ed85.chunk.js": "/stefan-girlich.github.io/static/js/787.4aa6ed85.chunk.js",
+    "static/media/montserrat-latin-variable-wghtOnly-normal.woff2": "/stefan-girlich.github.io/static/media/montserrat-latin-variable-wghtOnly-normal.ab0af27f0deddae417c1.woff2",
+    "static/media/montserrat-latin-ext-variable-wghtOnly-normal.woff2": "/stefan-girlich.github.io/static/media/montserrat-latin-ext-variable-wghtOnly-normal.f43b28e21eae47d6a265.woff2",
+    "static/media/montserrat-cyrillic-ext-variable-wghtOnly-normal.woff2": "/stefan-girlich.github.io/static/media/montserrat-cyrillic-ext-variable-wghtOnly-normal.e055b659dda93097b83e.woff2",
+    "static/media/montserrat-cyrillic-variable-wghtOnly-normal.woff2": "/stefan-girlich.github.io/static/media/montserrat-cyrillic-variable-wghtOnly-normal.53b27588d318b7fa2f0c.woff2",
+    "static/media/montserrat-vietnamese-variable-wghtOnly-normal.woff2": "/stefan-girlich.github.io/static/media/montserrat-vietnamese-variable-wghtOnly-normal.5c770f2a958918627f2d.woff2",
+    "index.html": "/stefan-girlich.github.io/index.html",
+    "main.32538bd6.css.map": "/stefan-girlich.github.io/static/css/main.32538bd6.css.map",
+    "main.062e5aad.js.map": "/stefan-girlich.github.io/static/js/main.062e5aad.js.map",
+    "787.4aa6ed85.chunk.js.map": "/stefan-girlich.github.io/static/js/787.4aa6ed85.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f60f6eaa.css",
-    "static/js/main.6283d206.js"
+    "static/css/main.32538bd6.css",
+    "static/js/main.062e5aad.js"
   ]
 }
