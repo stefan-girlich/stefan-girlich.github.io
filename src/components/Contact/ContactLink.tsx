@@ -19,6 +19,10 @@ const Root = styled.a`
     margin-bottom: ${({ theme }) => theme.spacing(1.5)};
   }
 
+  ${({ theme }) => theme.media('mobile')} {
+    margin-bottom: ${({ theme }) => theme.spacing(1)};
+  }
+
   * {
     cursor: pointer;
   }

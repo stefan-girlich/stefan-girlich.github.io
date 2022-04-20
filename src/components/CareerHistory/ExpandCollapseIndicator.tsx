@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components/macro'
 
 const Root = styled.div`
+  display: inline;
   color: ${({ theme }) => theme.palette.primary.main};
   border: 0;
   background: transparent;

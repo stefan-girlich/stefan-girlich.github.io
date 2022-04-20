@@ -15,10 +15,14 @@ const Content = styled.div`
 `
 
 const Details = styled.div`
-  max-height: 500px; // TODO a hack to avoid measuring content height - should be replaced when content is taller
+  max-height: 580px; // TODO a hack to avoid measuring content height - should be replaced when content is taller
   transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
   overflow: hidden;
   opacity: 1;
+
+  ${({ theme }) => theme.media('tablet')} {
+    margin-top: ${({ theme }) => theme.spacing(2)};
+  }
 `
 
 const TitleRow = styled(H4)`
@@ -33,6 +37,7 @@ const TitleRow = styled(H4)`
 
   ${({ theme }) => theme.media('tablet')} {
     align-items: flex-start;
+    margin-top: ${({ theme }) => theme.spacing(1)};
   }
 
   *  {
@@ -45,6 +50,7 @@ const TitleRowLefthandItems = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-right: ${({ theme }) => theme.spacing(1)};
 
   ${({ theme }) => theme.media('tablet')} {
     flex-direction: column;
@@ -52,13 +58,17 @@ const TitleRowLefthandItems = styled.div`
   }
 `
 
-const Role = styled.span``
+const Role = styled.span`
+  line-height: 1.2;
+`
+
 const Organization = styled.span`
   color: ${({ theme }) => theme.palette.secondary.main};
   font-weight: 300;
+  line-height: 1.1;
 
   ${({ theme }) => theme.media('tablet')} {
-    margin-top: ${({ theme }) => theme.spacing(1)};
+    margin-top: ${({ theme }) => theme.spacing(0.5)};
   }
 
   &::before {
@@ -76,6 +86,10 @@ const Timespan = styled.div`
   font-size: ${({ theme }) => theme.fontSize('sm')};
   line-height: ${({ theme }) => theme.fontSize('md')};
   white-space: nowrap;
+
+  ${({ theme }) => theme.media('tablet')} {
+    margin-top: 1px; // TODO generalize vertical alignment with left-hand text
+  }
 `
 
 const BaseExpandCollapseIndicator = styled(ExpandCollapseIndicator)`
@@ -95,12 +109,16 @@ const DesktopExpandCollapseIndicator = styled(BaseExpandCollapseIndicator)`
 const MobileExpandCollapseIndicator = styled(BaseExpandCollapseIndicator)`
   ${({ theme }) => theme.media('tablet')} {
     display: inline-block;
-    margin-left: ${({ theme }) => theme.spacing(1.5)};
+    margin-left: ${({ theme }) => theme.spacing(1)};
 
     svg {
       margin-bottom: 1px;
     }
   }
+`
+
+const NonBreakingSpan = styled.span`
+  white-space: nowrap;
 `
 
 const ActivityList = styled.ul`
@@ -113,6 +131,10 @@ const ActivityListItem = styled(RichTextParagraph)`
   padding-left: ${({ theme }) => theme.spacing(1)};
   list-style-type: square;
 
+  ${({ theme }) => theme.media('tablet')} {
+    margin-left: ${({ theme }) => theme.spacing(3)};
+  }
+
   &::marker {
     color: ${({ theme }) => theme.palette.tertiary.main};
   }
@@ -122,6 +144,19 @@ const formatTimespan = (startYear: number, endYear: number | null) => {
   if (endYear === null) return `${startYear} –`
   if (startYear === endYear) return `${startYear}`
   return `${startYear}\u00A0–\u00A0${endYear}`
+}
+
+/** We want to separate the last word in the "role" string so we can
+ * wrap it into an element together with the mobile expand/collapse indicator
+ * to prevent the latter from solely overflowing into a new line.
+ */
+const splitRoleWords = (roleString: string) => {
+  const roleWords = roleString.split(/(\s+)/)
+  const isRoleSingleWord = roleWords.length === 1
+  const roleFirstWords = isRoleSingleWord ? [...roleWords] : roleWords.slice(0, -1)
+  const roleLastWord = isRoleSingleWord ? null : roleWords.slice(-1)
+  const roleFirstWordsString = roleFirstWords.join(' ')
+  return [roleFirstWordsString, roleLastWord]
 }
 
 export interface CareerHistoryItem {
@@ -144,6 +179,9 @@ const CareerHistoryListItem = ({ data, index, totalItemCount }: Props) => {
   const toggle = () => setExpanded(!isExpanded)
   const hasDetailContent = !!data.text.length || !!data.activities.length
 
+  const { role } = data
+  const roleSegments = hasDetailContent ? splitRoleWords(role) : [role, null]
+
   return (
     <Root>
       <CareerHistoryTimelineSegment isMostRecent={index === 0} isOldest={index === totalItemCount - 1} />
@@ -152,8 +190,13 @@ const CareerHistoryListItem = ({ data, index, totalItemCount }: Props) => {
         <TitleRow onClick={toggle}>
           <TitleRowLefthandItems>
             <Role>
-              {data.role}
-              {hasDetailContent && <MobileExpandCollapseIndicator expanded={isExpanded} />}
+              <span>{roleSegments[0]}</span>
+              {!!roleSegments[1] && (
+                <NonBreakingSpan>
+                  {roleSegments[1]}
+                  <MobileExpandCollapseIndicator expanded={isExpanded} />
+                </NonBreakingSpan>
+              )}
             </Role>
             {data.organization && <Organization>{data.organization}</Organization>}
             {hasDetailContent && <DesktopExpandCollapseIndicator expanded={isExpanded} />}

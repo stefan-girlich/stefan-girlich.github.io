@@ -1,6 +1,6 @@
 {
   "title": "stefan.girlich",
-  "subtitle": "Tech enthusiast | Engineer | IT consultant",
+  "subtitle": "Tech\u00A0enthusiast | Engineer | IT\u00A0consultant",
   "intro_text": "Dedicated IT professional with a deep passion for a broad range of technologies. Over ten years of experience working as an engineer, solution architect and consultant in various organizational contexts and industries.",
   "goals_title": "What I am looking for",
   "goals_text": "I am looking for a long-term full-time position as a Founding Tech Lead or Head of Engineering in the Berlin startup space. It is my ambition to build an excellent team of engineers and designers to solve a real-world problem using state-of-the-art technology.",
@@ -94,7 +94,7 @@
   "education_history_items": [
     {
       "organization": "Beuth Hochschule für Technik Berlin",
-      "role": "Media informatics",
+      "role": "Bachelor of Science",
       "start_year": 2009,
       "end_year": 2011,
       "text": "Media informatics studies (B. Sc.) spanning rich-media application development and IT fundamentals, finishing with a bachelor's thesis and Android-based software prototype for a web API for camera-based head position tracking",

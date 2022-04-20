@@ -35,6 +35,7 @@ const Subtitle = styled.h1`
   font-weight: 300;
   font-size: ${({ theme }) => theme.fontSize('md')};
   color: ${({ theme }) => theme.palette.primary.main};
+  line-height: 1.3;
 `
 
 const Header = () => {

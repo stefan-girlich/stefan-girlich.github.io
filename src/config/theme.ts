@@ -32,9 +32,9 @@ const BRAND_CONTRASTS = {
 }
 
 const FONT_SIZES_PX: Record<FontSize, number> = {
-  xl: 36,
-  lg: 26,
-  md: 20,
+  xl: 32,
+  lg: 24,
+  md: 18,
   sm: 14,
   xs: 10,
   paragraph: 16,

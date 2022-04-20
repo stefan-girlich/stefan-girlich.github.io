@@ -11,14 +11,10 @@ import data from './config/data.json'
 
 function HomePage() {
   const [isSkillsLegendOpen, setSkillsLegendOpen] = useState(false)
-
   const contactSectionRef = useRef<HTMLDivElement | null>(null)
-
   const onRequestSkillsLegend = () => setSkillsLegendOpen(true)
   const onRequestCloseSkillsLegend = () => setSkillsLegendOpen(false)
-  const onRequestContact = () => {
-    contactSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
+  const onRequestContact = () => contactSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
 
   return (
     <>

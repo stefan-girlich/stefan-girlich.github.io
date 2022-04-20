@@ -12,6 +12,10 @@ const Content = styled.div`
   display: flex;
   flex-direction: row;
   margin-bottom: ${({ theme }) => theme.spacing(5)};
+
+  ${({ theme }) => theme.media('mobile')} {
+    flex-direction: column;
+  }
 `
 
 const Column = styled.div`
@@ -22,6 +26,10 @@ const Column = styled.div`
 
   ${({ theme }) => theme.media('tablet')} {
     margin: 0 ${({ theme }) => theme.spacing(3)};
+  }
+
+  ${({ theme }) => theme.media('mobile')} {
+    margin: 0;
   }
 
   &:first-child {

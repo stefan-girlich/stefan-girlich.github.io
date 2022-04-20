@@ -8,9 +8,6 @@
 
 ## next
 
-- mobile
-- PDF download
-
 ## now, but nice to have
 
 - optimize SEO
@@ -22,3 +19,4 @@
 - Adhere to JSON resume standard
 - right-to-left layout tests
 - limitation: icons not in data.json
+- limitation: some HTML entities, some unicode

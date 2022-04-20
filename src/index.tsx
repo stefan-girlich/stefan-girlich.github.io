@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
   * {
     cursor: default;
     -webkit-tap-highlight-color: ${({ theme }) => transparentize(0.75, theme.palette.primary.main)};
+    box-sizing: border-box;
   }
 
   html, body {

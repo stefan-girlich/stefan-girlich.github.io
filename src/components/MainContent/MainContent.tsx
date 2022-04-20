@@ -18,6 +18,10 @@ const CenterColumn = styled.div`
   ${({ theme }) => theme.media('tablet')} {
     max-width: 440px;
   }
+
+  ${({ theme }) => theme.media('mobile')} {
+    max-width: 320px;
+  }
 `
 
 const MainContent = ({ children }: Props) => {

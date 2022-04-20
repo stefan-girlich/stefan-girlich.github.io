@@ -43,6 +43,10 @@ const Content = styled.div`
   padding: ${({ theme }) => theme.spacing(3)};
   background: ${({ theme }) => theme.palette.background.main};
   color: ${({ theme }) => theme.palette.background.contrastText};
+
+  ${({ theme }) => theme.media('tablet')} {
+    padding: ${({ theme }) => theme.spacing(2)};
+  }
 `
 
 const OverlayTitle = styled(SectionTitle)`

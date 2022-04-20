@@ -16,7 +16,7 @@ const Content = styled.div`
   margin-top: ${({ theme }) => theme.spacing(1)};
 `
 
-const IconContainer = styled.div`
+const BaseIconContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -30,10 +30,28 @@ const IconContainer = styled.div`
   }
 `
 
+const IconContainer = styled(BaseIconContainer)`
+  ${({ theme }) => theme.media('mobile')} {
+    display: none;
+  }
+`
+
+const MobileIconContainer = styled(BaseIconContainer)`
+  ${({ theme }) => theme.media('mobile', 'min')} {
+    display: none;
+  }
+
+  margin-left: ${({ theme }) => theme.spacing(2)};
+`
+
 const Text = styled(Paragraph)`
   flex: 1;
   margin-right: ${({ theme }) => theme.spacing(4)};
   margin-bottom: 0;
+
+  ${({ theme }) => theme.media('mobile')} {
+    margin-right: 0;
+  }
 `
 
 interface Props {
@@ -45,6 +63,7 @@ interface Props {
 const MotivationItem = ({ title, text, icon }: Props) => {
   return (
     <Root>
+      <MobileIconContainer>{icon}</MobileIconContainer>
       <MotivationSubsectionTitle>{title}</MotivationSubsectionTitle>
       <Content>
         <Text>{text}</Text>

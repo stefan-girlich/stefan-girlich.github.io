@@ -8,6 +8,10 @@ const Root = styled.div`
   align-items: center;
   width: ${({ theme }) => theme.spacing(DOT_SIZE)};
   margin-right: ${({ theme }) => theme.spacing(3)};
+
+  ${({ theme }) => theme.media('mobile')} {
+    margin-right: ${({ theme }) => theme.spacing(2)};
+  }
 `
 
 const Dot = styled.div`

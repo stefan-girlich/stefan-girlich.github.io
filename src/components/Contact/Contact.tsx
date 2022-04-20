@@ -28,6 +28,10 @@ const ButtonsContainer = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-column-gap: ${({ theme }) => theme.spacing(1.5)};
   }
+
+  ${({ theme }) => theme.media('mobile')} {
+    grid-template-columns: 1fr;
+  }
 `
 
 interface Props {

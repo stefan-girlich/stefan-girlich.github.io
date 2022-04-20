@@ -10,6 +10,10 @@ const Root = styled.li`
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: ${({ theme }) => theme.spacing(1.5)};
+
+  ${({ theme }) => theme.media('tablet')} {
+    margin-bottom: ${({ theme }) => theme.spacing(1)};
+  }
 `
 
 const SkillName = styled.span`

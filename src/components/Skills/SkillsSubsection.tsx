@@ -12,6 +12,10 @@ const SkillsSubsectionTitle = styled(SubsectionTitle)`
 
 const SkillsList = styled.ul`
   margin-bottom: ${({ theme }) => theme.spacing(4)};
+
+  ${({ theme }) => theme.media('tablet')} {
+    margin-bottom: ${({ theme }) => theme.spacing(2)};
+  }
 `
 
 interface Props {
