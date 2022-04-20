@@ -1,16 +1,21 @@
-import styled, { useTheme } from 'styled-components/macro'
+import styled from 'styled-components/macro'
 
 export const SIZE = 5
 
 const Root = styled.div`
   width: ${SIZE}px;
   height: ${SIZE}px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: ${({ theme }) => theme.palette.background.dark};
-  /* border-radius: ${SIZE}px; */
   margin-left: 3px;
   background: ${({ theme }) => theme.palette.background.dark};
+  transition: background-color 0.5s ease-out;
+
+  &.learning {
+    background: ${({ theme }) => theme.palette.tertiary.main};
+  }
+
+  &.filled {
+    background: ${({ theme }) => theme.palette.primary.main};
+  }
 `
 
 interface Props {
@@ -19,9 +24,8 @@ interface Props {
 }
 
 const SkillScoreIndicator = ({ filled, learning }: Props) => {
-  const { palette } = useTheme()
-  const color = filled ? (learning ? palette.tertiary.main : palette.primary.main) : undefined
-  return <Root style={{ borderColor: color, background: color }} />
+  const className = filled ? (learning ? 'learning' : 'filled') : undefined
+  return <Root className={className} />
 }
 
 export default SkillScoreIndicator

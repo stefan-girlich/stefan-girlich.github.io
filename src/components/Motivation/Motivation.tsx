@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components/macro'
 import data from '../../config/data.json'
 import { SectionTitle } from '../Header/Heading'
+import Revealable from '../Revealable/Revealable'
 import MotivationItem from './MotivationItem'
 
 const Root = styled.div`
@@ -15,14 +16,17 @@ const ICONS = [solid('code'), solid('house-chimney-user'), solid('handshake-angl
 const Motivation = () => {
   return (
     <Root>
-      <SectionTitle>{data.motivation_title}</SectionTitle>
+      <Revealable>
+        <SectionTitle>{data.motivation_title}</SectionTitle>
+      </Revealable>
       {data.motivation_items.map((item, index) => (
-        <MotivationItem
-          title={item.title}
-          text={item.text}
-          icon={<FontAwesomeIcon className="fa-3x" icon={ICONS[index]} />}
-          key={index}
-        />
+        <Revealable delay={0.1 * index} key={index}>
+          <MotivationItem
+            title={item.title}
+            text={item.text}
+            icon={<FontAwesomeIcon className="fa-3x" icon={ICONS[index]} />}
+          />
+        </Revealable>
       ))}
     </Root>
   )

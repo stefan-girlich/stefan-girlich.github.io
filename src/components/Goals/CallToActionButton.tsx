@@ -21,6 +21,7 @@ const Root = styled.button`
   font-family: inherit;
   border: 0;
   background-color: ${({ theme }) => theme.palette.primary.main};
+  color: ${({ theme }) => theme.palette.primary.contrastText};
   cursor: pointer;
 
   * {

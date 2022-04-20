@@ -1,10 +1,8 @@
+import { useRef } from 'react'
 import styled from 'styled-components/macro'
+import useOnScreen from '../../hooks/useOnScreen'
 import { SubsectionTitle } from '../Header/Heading'
 import Paragraph from '../Paragraph/Paragraph'
-
-const Root = styled.div`
-  margin-bottom: ${({ theme }) => theme.spacing(4)};
-`
 
 const MotivationSubsectionTitle = styled(SubsectionTitle)`
   color: ${({ theme }) => theme.palette.primary.main};
@@ -24,6 +22,7 @@ const BaseIconContainer = styled.div`
   text-align: center;
   width: 96px;
   color: ${({ theme }) => theme.palette.tertiary.main};
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
 
   ${({ theme }) => theme.media('tablet')} {
     width: 48px;
@@ -48,9 +47,27 @@ const Text = styled(Paragraph)`
   flex: 1;
   margin-right: ${({ theme }) => theme.spacing(4)};
   margin-bottom: 0;
+  transition: opacity 0.8s ease-out;
+
+  ${({ theme }) => theme.media('tablet')} {
+    width: 48px;
+  }
 
   ${({ theme }) => theme.media('mobile')} {
     margin-right: 0;
+  }
+`
+
+const Root = styled.div`
+  margin-bottom: ${({ theme }) => theme.spacing(4)};
+
+  &.unrevealed ${BaseIconContainer} {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+
+  &.unrevealed ${Text} {
+    opacity: 0;
   }
 `
 
@@ -61,8 +78,10 @@ interface Props {
 }
 
 const MotivationItem = ({ title, text, icon }: Props) => {
+  const ref = useRef<HTMLDivElement | null>(null)
+  const { wasOnScreenClassName } = useOnScreen(ref)
   return (
-    <Root>
+    <Root ref={ref} className={wasOnScreenClassName}>
       <MobileIconContainer>{icon}</MobileIconContainer>
       <MotivationSubsectionTitle>{title}</MotivationSubsectionTitle>
       <Content>

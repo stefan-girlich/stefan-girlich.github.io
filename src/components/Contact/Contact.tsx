@@ -5,6 +5,7 @@ import styled from 'styled-components/macro'
 import data from '../../config/data.json'
 import { SectionTitle } from '../Header/Heading'
 import { RichTextParagraph } from '../Paragraph/Paragraph'
+import Revealable from '../Revealable/Revealable'
 import ContactLink from './ContactLink'
 
 // TODO make icons configurable via data.json
@@ -34,26 +35,34 @@ const ButtonsContainer = styled.div`
   }
 `
 
+const RevealableContactLink = styled(Revealable)`
+  flex: 1;
+`
+
 interface Props {
   elementRef: MutableRefObject<HTMLDivElement | null>
 }
 
 const Contact = ({ elementRef }: Props) => {
   return (
-    <Root ref={elementRef}>
-      <SectionTitle>{data.contact_title}</SectionTitle>
-      <RichTextParagraph>{data.contact_text}</RichTextParagraph>
-      <ButtonsContainer>
-        {data.contact_links.map(({ label, url, type }, index) => (
-          <ContactLink
-            label={label}
-            url={url}
-            type={type}
-            icon={<FontAwesomeIcon className="fa-lg" icon={ICONS[index]} />}
-          />
-        ))}
-      </ButtonsContainer>
-    </Root>
+    <Revealable>
+      <Root ref={elementRef}>
+        <SectionTitle>{data.contact_title}</SectionTitle>
+        <RichTextParagraph>{data.contact_text}</RichTextParagraph>
+        <ButtonsContainer>
+          {data.contact_links.map(({ label, url, type }, index) => (
+            <RevealableContactLink delay={0.05 * index} key={index}>
+              <ContactLink
+                label={label}
+                url={url}
+                type={type}
+                icon={<FontAwesomeIcon className="fa-lg" icon={ICONS[index]} />}
+              />
+            </RevealableContactLink>
+          ))}
+        </ButtonsContainer>
+      </Root>
+    </Revealable>
   )
 }
 

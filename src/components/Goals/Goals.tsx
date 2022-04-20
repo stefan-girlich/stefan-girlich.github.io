@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import data from '../../config/data.json'
 import { SectionTitle } from '../Header/Heading'
 import Paragraph from '../Paragraph/Paragraph'
+import Revealable from '../Revealable/Revealable'
 import CallToActionButton from './CallToActionButton'
 
 const Root = styled.div`
@@ -18,11 +19,13 @@ interface Props {
 
 const Goals = ({ onRequestContact }: Props) => {
   return (
-    <Root>
-      <SectionTitle>{data.goals_title}</SectionTitle>
-      <Text>{data.goals_text}</Text>
-      <CallToActionButton onClick={onRequestContact} />
-    </Root>
+    <Revealable>
+      <Root>
+        <SectionTitle>{data.goals_title}</SectionTitle>
+        <Text>{data.goals_text}</Text>
+        <CallToActionButton onClick={onRequestContact} />
+      </Root>
+    </Revealable>
   )
 }
 

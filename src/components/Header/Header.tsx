@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro'
 import data from '../../config/data.json'
 import RichTextParagraph from '../Paragraph/Paragraph'
+import Revealable from '../Revealable/Revealable'
 
 const Root = styled.header`
   margin-top: ${({ theme }) => theme.spacing(6)};
@@ -27,8 +28,6 @@ const Title = styled.h1`
   ${({ theme }) => theme.media('tablet')} {
     margin-bottom: ${({ theme }) => theme.spacing(1.5)};
   }
-
-  /* flex-direction: row; */
 `
 
 const Subtitle = styled.h1`
@@ -46,7 +45,9 @@ const Header = () => {
         <Subtitle>{data.subtitle}</Subtitle>
       </TitleRow>
 
-      <RichTextParagraph>{data.intro_text}</RichTextParagraph>
+      <Revealable disableTranslate>
+        <RichTextParagraph>{data.intro_text}</RichTextParagraph>
+      </Revealable>
     </Root>
   )
 }

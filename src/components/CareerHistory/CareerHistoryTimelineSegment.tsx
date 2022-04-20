@@ -1,4 +1,6 @@
+import { useRef } from 'react'
 import styled from 'styled-components/macro'
+import useOnScreen from '../../hooks/useOnScreen'
 
 const DOT_SIZE = 2
 
@@ -18,6 +20,11 @@ const Dot = styled.div`
   width: 8px;
   height: 8px;
   background: ${({ theme }) => theme.palette.tertiary.main};
+  transition: transform 0.2s ease-out 0.1s;
+
+  &.unrevealed {
+    transform: scale(0.2);
+  }
 `
 
 const VerticalLineTop = styled.div`
@@ -41,10 +48,12 @@ interface Props {
 }
 
 const CareerHistoryTimelineSegment = ({ isMostRecent, isOldest }: Props) => {
+  const ref = useRef<HTMLDivElement | null>(null)
+  const { wasOnScreenClassName } = useOnScreen(ref)
   return (
-    <Root>
+    <Root ref={ref}>
       <VerticalLineTop style={isMostRecent ? { opacity: 0 } : undefined} />
-      <Dot />
+      <Dot className={wasOnScreenClassName} />
       <VerticalLineBottom style={isOldest ? { opacity: 0 } : undefined} />
     </Root>
   )

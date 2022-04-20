@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro'
 import SkillSubsectionData from '../../entity/SkillSubsectionData'
 import { SectionTitle } from '../Header/Heading'
+import Revealable from '../Revealable/Revealable'
 import SkillsLegendButton from '../SkillsLegendButton/SkillsLegendButton'
 import SkillsSubsection from './SkillsSubsection'
 
@@ -63,19 +64,25 @@ const Skills = ({ title, subsections, onLegendButtonClick }: Props) => {
 
   return (
     <Root>
-      <SectionTitle>
-        {title}
-        <SkillsLegendButton onClick={onLegendButtonClick} />
-      </SectionTitle>
+      <Revealable>
+        <SectionTitle>
+          {title}
+          <SkillsLegendButton onClick={onLegendButtonClick} />
+        </SectionTitle>
+      </Revealable>
       <Content>
         <Column>
           {subsectionsByCol[0].map(({ title, items }, index) => (
-            <SkillsSubsection title={title} skills={items} key={index} />
+            <Revealable key={index}>
+              <SkillsSubsection title={title} skills={items} />
+            </Revealable>
           ))}
         </Column>
         <Column>
           {subsectionsByCol[1].map(({ title, items }, index) => (
-            <SkillsSubsection title={title} skills={items} key={index} />
+            <Revealable key={index}>
+              <SkillsSubsection title={title} skills={items} />
+            </Revealable>
           ))}
         </Column>
       </Content>

@@ -1,5 +1,6 @@
 import styled from 'styled-components/macro'
 import { SectionTitle } from '../Header/Heading'
+import Revealable from '../Revealable/Revealable'
 import CareerHistoryListItem, { CareerHistoryItem } from './CareerHistoryListItem'
 
 const Root = styled.div`
@@ -17,14 +18,16 @@ interface Props {
 
 const CareerHistory = ({ title, items }: Props) => {
   return (
-    <Root>
-      <SectionTitle>{title}</SectionTitle>
-      <CareerList>
-        {items.map((item, index) => (
-          <CareerHistoryListItem data={item} index={index} totalItemCount={items.length} key={index} />
-        ))}
-      </CareerList>
-    </Root>
+    <Revealable>
+      <Root>
+        <SectionTitle>{title}</SectionTitle>
+        <CareerList>
+          {items.map((item, index) => (
+            <CareerHistoryListItem data={item} index={index} totalItemCount={items.length} key={index} />
+          ))}
+        </CareerList>
+      </Root>
+    </Revealable>
   )
 }
 

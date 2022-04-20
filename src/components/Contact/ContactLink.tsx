@@ -4,7 +4,6 @@ import { IS_TOUCH_DEVICE } from '../../index'
 import { BrandColorSets } from '../../theme'
 
 const Root = styled.a`
-  flex: 1;
   display: flex;
   flex-direction: row;
   align-items: center;

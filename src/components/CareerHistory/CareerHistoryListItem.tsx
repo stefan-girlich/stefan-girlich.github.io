@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import styled from 'styled-components/macro'
+import useOnScreen from '../../hooks/useOnScreen'
 import { H4 } from '../Header/Heading'
 import RichTextParagraph from '../Paragraph/Paragraph'
 import CareerHistoryTimelineSegment from './CareerHistoryTimelineSegment'
@@ -66,6 +67,7 @@ const Organization = styled.span`
   color: ${({ theme }) => theme.palette.secondary.main};
   font-weight: 300;
   line-height: 1.1;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 
   ${({ theme }) => theme.media('tablet')} {
     margin-top: ${({ theme }) => theme.spacing(0.5)};
@@ -77,6 +79,11 @@ const Organization = styled.span`
     ${({ theme }) => theme.media('tablet')} {
       content: '';
     }
+  }
+
+  &.unrevealed {
+    opacity: 0;
+    transform: translateX(-7px);
   }
 `
 
@@ -177,13 +184,17 @@ interface Props {
 const CareerHistoryListItem = ({ data, index, totalItemCount }: Props) => {
   const [isExpanded, setExpanded] = useState(false)
   const toggle = () => setExpanded(!isExpanded)
+
+  const ref = useRef<HTMLLIElement | null>(null)
+  const { wasOnScreenClassName } = useOnScreen(ref)
+
   const hasDetailContent = !!data.text.length || !!data.activities.length
 
   const { role } = data
   const roleSegments = hasDetailContent ? splitRoleWords(role) : [role, null]
 
   return (
-    <Root>
+    <Root ref={ref}>
       <CareerHistoryTimelineSegment isMostRecent={index === 0} isOldest={index === totalItemCount - 1} />
 
       <Content>
@@ -198,7 +209,7 @@ const CareerHistoryListItem = ({ data, index, totalItemCount }: Props) => {
                 </NonBreakingSpan>
               )}
             </Role>
-            {data.organization && <Organization>{data.organization}</Organization>}
+            {data.organization && <Organization className={wasOnScreenClassName}>{data.organization}</Organization>}
             {hasDetailContent && <DesktopExpandCollapseIndicator expanded={isExpanded} />}
           </TitleRowLefthandItems>
 
