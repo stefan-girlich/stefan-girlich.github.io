@@ -95,7 +95,7 @@ const Timespan = styled.div`
   white-space: nowrap;
 
   ${({ theme }) => theme.media('tablet')} {
-    margin-top: 1px; // TODO generalize vertical alignment with left-hand text
+    margin-top: 1.5px; // TODO generalize vertical alignment with left-hand text
   }
 `
 
