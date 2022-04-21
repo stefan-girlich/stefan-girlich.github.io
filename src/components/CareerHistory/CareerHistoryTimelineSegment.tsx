@@ -20,7 +20,7 @@ const Dot = styled.div`
   width: 8px;
   height: 8px;
   background: ${({ theme }) => theme.palette.tertiary.main};
-  transition: transform 0.2s ease-out 0.1s;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s;
 
   &.unrevealed {
     transform: scale(0.2);
