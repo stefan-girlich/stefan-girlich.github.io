@@ -85,6 +85,12 @@ const Organization = styled.span`
     opacity: 0;
     transform: translateX(-7px);
   }
+
+  ${({ theme }) => theme.media('tablet')} {
+    &.unrevealed {
+      transform: translateX(0);
+    }
+  }
 `
 
 const Timespan = styled.div`
