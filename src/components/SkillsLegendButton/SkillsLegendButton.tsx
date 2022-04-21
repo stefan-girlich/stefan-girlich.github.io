@@ -25,7 +25,7 @@ const Root = styled.button`
   svg {
     font-size: 12px;
     vertical-align: 7px;
-    margin-left: 1px;
+    margin-left: 0.5px;
   }
 
   &:hover {

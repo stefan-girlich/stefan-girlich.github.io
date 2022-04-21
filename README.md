@@ -11,7 +11,6 @@
 ## now, but nice to have
 
 - webgl background waves
-- little reveal animations
 
 ### later
 

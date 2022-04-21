@@ -67,6 +67,10 @@ const CloseButton = styled.button`
     cursor: pointer;
   }
 
+  svg {
+    margin-top: 5px;
+  }
+
   :hover {
     color: ${({ theme }) => theme.palette.primary.main};
   }
@@ -107,7 +111,7 @@ const SkillsLegendOverlay = ({ open, onCloseClick }: Props) => {
           <OverlayTitle>
             {data.skills_legend_title}
             <CloseButton onClick={onCloseClick} aria-label={data.close_button_aria_label}>
-              <FontAwesomeIcon className="fa-xl" icon={solid('xmark')} />
+              <FontAwesomeIcon className="fa-1x" icon={solid('xmark')} />
             </CloseButton>
           </OverlayTitle>
           {data.skills_legend_items.map((item, index) => (
