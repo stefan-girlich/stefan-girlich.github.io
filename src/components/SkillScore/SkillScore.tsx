@@ -42,7 +42,7 @@ const SkillScore = ({ value, className }: Props) => {
   const isLearning = value <= 2
   const ariaLabel = `${data.skill_score_aria_label} ${value} / ${MAX_SKILL_SCORE}`
   return (
-    <Root ref={ref} className={`${className} ${wasOnScreenClassName}`} aria-label={ariaLabel}>
+    <Root ref={ref} className={`${className} ${wasOnScreenClassName}`} role="figure" aria-label={ariaLabel}>
       {[...Array(MAX_SKILL_SCORE)].map((_, i) => (
         <SkillScoreIndicator filled={i + 1 <= value} learning={isLearning} key={i} />
       ))}

@@ -1,6 +1,7 @@
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components/macro'
+import data from '../../config/data.json'
 
 const Root = styled.button`
   flex-shrink: 0;
@@ -40,7 +41,7 @@ interface Props {
 }
 
 const SkillsLegendButton = ({ onClick }: Props) => (
-  <Root onClick={onClick}>
+  <Root onClick={onClick} aria-label={data.legend_button_aria_label}>
     <FontAwesomeIcon icon={solid('question')} />
   </Root>
 )

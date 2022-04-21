@@ -148,6 +148,7 @@
     "Advanced practical experience and mentorship in various settings",
     "Expert-level hands-on skills as well as mentorship and consulting skills"
   ],
+  "legend_button_aria_label": "Open skills legend overlay",
   "close_button_aria_label": "Close",
   "skill_score_aria_label": "Skill score:",
   "technical_skills_title": "Technical skills",
