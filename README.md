@@ -1,6 +1,6 @@
 # stefan-girlich.github.io
 
-Hi, I'm Stefan and this project contains the codebase for my website [stefan-girlich.github.io](https://stefan-girlich.github.io/). Feel free to fork and customize it for your own purposes under [GPL v3](https://www.gnu.org/licenses/gpl-3.0.en.html).
+Hi, I'm Stefan and this project contains the codebase for my website [stefan-girlich.github.io](https://stefan-girlich.github.io/). Feel free to fork and customize it for your own purposes under the [given license](LICENSE).
 
 ## Purpose
 
@@ -71,3 +71,7 @@ _This section describes the standard approach to using this codebase as a templa
 - Font Awesome icons cannot be defined via [`data.json`](src/config/data.json) since [Dynamic Icon Importing](https://fontawesome.com/docs/web/use-with/react/add-icons#dynamic-icon-importing) requires string literals to be used
 - The website has not been tested with right-to-left (RTL) layouts
 - The website does not yet comply with the [JSON Resume](https://jsonresume.org) standard
+
+## License
+
+This project is licensed under [GPL v3](LICENSE).
