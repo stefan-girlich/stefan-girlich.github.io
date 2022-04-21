@@ -6,12 +6,28 @@ import Paragraph from '../Paragraph/Paragraph'
 
 const MotivationSubsectionTitle = styled(SubsectionTitle)`
   color: ${({ theme }) => theme.palette.primary.main};
+  transition: opacity 0.4s ease-out 0.1s;
 `
 
 const Content = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: ${({ theme }) => theme.spacing(1)};
+`
+
+const Text = styled(Paragraph)`
+  flex: 1;
+  margin-right: ${({ theme }) => theme.spacing(4)};
+  margin-bottom: 0;
+  transition: opacity 0.8s ease-out 0.2s;
+
+  ${({ theme }) => theme.media('tablet')} {
+    width: 48px;
+  }
+
+  ${({ theme }) => theme.media('mobile')} {
+    margin-right: 0;
+  }
 `
 
 const BaseIconContainer = styled.div`
@@ -43,27 +59,16 @@ const MobileIconContainer = styled(BaseIconContainer)`
   margin-left: ${({ theme }) => theme.spacing(2)};
 `
 
-const Text = styled(Paragraph)`
-  flex: 1;
-  margin-right: ${({ theme }) => theme.spacing(4)};
-  margin-bottom: 0;
-  transition: opacity 0.8s ease-out;
-
-  ${({ theme }) => theme.media('tablet')} {
-    width: 48px;
-  }
-
-  ${({ theme }) => theme.media('mobile')} {
-    margin-right: 0;
-  }
-`
-
 const Root = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing(4)};
 
   &.unrevealed ${BaseIconContainer} {
     opacity: 0;
-    transform: scale(1.3);
+    transform: scale(1.5);
+  }
+
+  &.unrevealed ${MotivationSubsectionTitle} {
+    opacity: 0;
   }
 
   &.unrevealed ${Text} {
