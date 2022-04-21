@@ -45,13 +45,22 @@ const Content = styled.div`
   color: ${({ theme }) => theme.palette.background.contrastText};
 
   ${({ theme }) => theme.media('tablet')} {
+    max-width: 420px;
+  }
+
+  ${({ theme }) => theme.media('mobile')} {
     padding: ${({ theme }) => theme.spacing(2)};
+    max-width: 340px;
   }
 `
 
 const OverlayTitle = styled(SectionTitle)`
   justify-content: space-between;
   margin-bottom: ${({ theme }) => theme.spacing(3)};
+
+  ${({ theme }) => theme.media('mobile')} {
+    margin-bottom: ${({ theme }) => theme.spacing(1)};
+  }
 `
 
 const CloseButton = styled.button`
@@ -93,6 +102,10 @@ const ScoreContainer = styled.div`
 const LegendItemText = styled(Paragraph)`
   margin-left: ${({ theme }) => theme.spacing(4)};
   margin-bottom: 0;
+
+  ${({ theme }) => theme.media('mobile')} {
+    margin-left: ${({ theme }) => theme.spacing(3)};
+  }
 `
 
 interface Props {
