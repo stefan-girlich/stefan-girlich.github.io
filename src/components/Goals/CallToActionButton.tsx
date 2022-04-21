@@ -50,7 +50,7 @@ const CallToActionButton = ({ onClick }: Props) => {
   return (
     <Root onClick={onClick} className={IS_TOUCH_DEVICE ? 'active' : undefined}>
       <IconContainer>
-        <FontAwesomeIcon className="fa-2x" icon={solid('arrow-right')} />
+        <FontAwesomeIcon className="fa-xl" icon={solid('arrow-right')} />
       </IconContainer>
       <Label>{data.goals_button_label}</Label>
     </Root>
