@@ -2,7 +2,7 @@ import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components/macro'
 
-const Root = styled.a`
+const Root = styled.button`
   flex-shrink: 0;
   display: inline-block;
   border-width: 1px;
@@ -23,8 +23,9 @@ const Root = styled.a`
   }
 
   svg {
-    font-size: 0.45em;
-    vertical-align: 0.55em;
+    font-size: 12px;
+    vertical-align: 7px;
+    margin-left: 1px;
   }
 
   &:hover {
