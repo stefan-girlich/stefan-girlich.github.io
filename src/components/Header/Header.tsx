@@ -30,7 +30,7 @@ const Title = styled.h1`
   }
 `
 
-const Subtitle = styled.h1`
+const Subtitle = styled.h2`
   font-weight: 300;
   font-size: ${({ theme }) => theme.fontSize('md')};
   color: ${({ theme }) => theme.palette.primary.main};

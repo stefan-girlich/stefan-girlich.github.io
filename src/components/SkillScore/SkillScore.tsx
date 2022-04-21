@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import styled from 'styled-components/macro'
+import data from '../../config/data.json'
 import useOnScreen from '../../hooks/useOnScreen'
 import SkillScoreIndicator from './SkillScoreIndicator'
 
@@ -38,10 +39,10 @@ interface Props {
 const SkillScore = ({ value, className }: Props) => {
   const ref = useRef<HTMLDivElement | null>(null)
   const { wasOnScreenClassName } = useOnScreen(ref)
-
   const isLearning = value <= 2
+  const ariaLabel = `${data.skill_score_aria_label} ${value} / ${MAX_SKILL_SCORE}`
   return (
-    <Root ref={ref} className={`${className} ${wasOnScreenClassName}`}>
+    <Root ref={ref} className={`${className} ${wasOnScreenClassName}`} aria-label={ariaLabel}>
       {[...Array(MAX_SKILL_SCORE)].map((_, i) => (
         <SkillScoreIndicator filled={i + 1 <= value} learning={isLearning} key={i} />
       ))}

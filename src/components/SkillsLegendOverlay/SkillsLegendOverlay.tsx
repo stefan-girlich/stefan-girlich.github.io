@@ -106,7 +106,7 @@ const SkillsLegendOverlay = ({ open, onCloseClick }: Props) => {
         <Content>
           <OverlayTitle>
             {data.skills_legend_title}
-            <CloseButton onClick={onCloseClick}>
+            <CloseButton onClick={onCloseClick} aria-label={data.close_button_aria_label}>
               <FontAwesomeIcon className="fa-xl" icon={solid('xmark')} />
             </CloseButton>
           </OverlayTitle>
