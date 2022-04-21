@@ -1,13 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import './reset.css'
-import HomePage from './HomePage'
-import reportWebVitals from './reportWebVitals'
-import { createGlobalStyle, ThemeProvider } from 'styled-components/macro'
 import '@fontsource/montserrat/variable.css'
-import theme from './config/theme'
 import { transparentize } from 'polished'
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import { createGlobalStyle, ThemeProvider } from 'styled-components/macro'
+import theme from './config/theme'
+import HomePage from './HomePage'
+import './index.css'
+import reportWebVitals from './reportWebVitals'
+import './reset.css'
 
 export const IS_TOUCH_DEVICE =
   'ontouchstart' in window || navigator.maxTouchPoints > 0 || (navigator as any).msMaxTouchPoints > 0
@@ -29,14 +29,15 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-ReactDOM.render(
+const container = document.getElementById('root')
+const root = createRoot(container!)
+root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <HomePage />
     </ThemeProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 )
 
 // If you want to start measuring performance in your app, pass a function
