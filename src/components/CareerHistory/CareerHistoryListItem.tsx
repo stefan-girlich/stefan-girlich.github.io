@@ -114,7 +114,11 @@ const DesktopExpandCollapseIndicator = styled(BaseExpandCollapseIndicator)`
     display: block;
 
     svg {
-      margin-bottom: 1px;
+      margin-bottom: 0px;
+    }
+
+    &.win32-vertical-alignment-fix svg {
+      margin-bottom: 2px;
     }
   }
 `
@@ -172,6 +176,9 @@ const splitRoleWords = (roleString: string) => {
   return [roleFirstWordsString, roleLastWord]
 }
 
+const isWin32 = () => window.navigator.platform.indexOf('Win') > -1
+const isBlink = () => !!(window as any).chrome
+
 export interface CareerHistoryItem {
   organization: string | null
   role: string
@@ -216,7 +223,12 @@ const CareerHistoryListItem = ({ data, index, totalItemCount }: Props) => {
               )}
             </Role>
             {data.organization && <Organization className={wasOnScreenClassName}>{data.organization}</Organization>}
-            {hasDetailContent && <DesktopExpandCollapseIndicator expanded={isExpanded} />}
+            {hasDetailContent && (
+              <DesktopExpandCollapseIndicator
+                className={isWin32() && isBlink() ? 'win32-vertical-alignment-fix' : ''}
+                expanded={isExpanded}
+              />
+            )}
           </TitleRowLefthandItems>
 
           <Timespan>{formatTimespan(data.start_year, data.end_year)}</Timespan>
