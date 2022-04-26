@@ -114,7 +114,7 @@ const DesktopExpandCollapseIndicator = styled(BaseExpandCollapseIndicator)`
     display: block;
 
     svg {
-      margin-top: 1px;
+      margin-bottom: 1px;
     }
   }
 `
