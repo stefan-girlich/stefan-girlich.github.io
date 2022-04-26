@@ -29,7 +29,7 @@ const Dot = styled.div`
 
 const VerticalLineTop = styled.div`
   width: 0;
-  height: 19px;
+  height: 19.5px;
   border-left: 1px dashed ${({ theme }) => theme.palette.quartary.main};
 
   ${({ theme }) => theme.media('tablet')} {
