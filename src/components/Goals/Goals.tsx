@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import data from '../../config/data.json'
 import { SectionTitle } from '../Header/Heading'
-import Paragraph from '../Paragraph/Paragraph'
+import { RichTextParagraph } from '../Paragraph/Paragraph'
 import Revealable from '../Revealable/Revealable'
 import CallToActionButton from './CallToActionButton'
 
@@ -9,7 +9,7 @@ const Root = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing(8)};
 `
 
-const Text = styled(Paragraph)`
+const Text = styled(RichTextParagraph)`
   margin-bottom: ${({ theme }) => theme.spacing(2)};
 `
 
