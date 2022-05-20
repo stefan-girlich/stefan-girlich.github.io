@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react'
+import data from '../../config/data.json'
 import styled from 'styled-components/macro'
 import useOnScreen from '../../hooks/useOnScreen'
 import { H4 } from '../Header/Heading'
@@ -158,7 +159,7 @@ const ActivityListItem = styled(RichTextParagraph)`
 `
 
 const formatTimespan = (startYear: number, endYear: number | null) => {
-  if (endYear === null) return `${startYear} –`
+  if (endYear === null) return `${startYear} – ${data.now}`
   if (startYear === endYear) return `${startYear}`
   return `${startYear}\u00A0–\u00A0${endYear}`
 }
