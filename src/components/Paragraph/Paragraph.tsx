@@ -25,6 +25,9 @@ export default Paragraph
 
 interface Props {
   children: string
+  className?: string
 }
 
-export const RichTextParagraph = ({ children }: Props) => <Paragraph dangerouslySetInnerHTML={{ __html: children }} />
+export const RichTextParagraph = ({ children, className }: Props) => (
+  <Paragraph className={className} dangerouslySetInnerHTML={{ __html: children }} />
+)
