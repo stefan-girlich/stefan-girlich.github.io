@@ -3,7 +3,7 @@
   "subtitle": "Tech\u00A0enthusiast\u00A0\u00A0| \u00A0Engineer\u00A0\u00A0|\u00A0 IT\u00A0consultant",
   "intro_text": "I'm Stefan, a dedicated IT professional with a deep passion for a broad range of technologies and over ten years of experience working as an engineer, solution architect and consultant in various organizational contexts and industries.",
   "goals_title": "What I do",
-  "goals_text": "I am a Technical Lead at <a target='_blank' href='https://otterspace.xyz/'>Otterspace</a>&nbsp;🦦, exploring the possibilities of digital democracies and making DAO onboarding more accessible for everyone. Follow us on <a target='_blank' href='https://twitter.com/otterspace_xyz'>Twitter</a> or shoot me a message if you want to know more!",
+  "goals_text": "I am currently working as a Technical Lead at <a target='_blank' href='https://otterspace.xyz/'>Otterspace</a>. Shoot me a message if you want to know more!",
   "goals_button_label": "Get in touch",
   "now": "now",
   "professional_career_history_title": "Professional career",
@@ -369,14 +369,10 @@
         },
         {
           "name": "French",
-          "score": 3
-        },
-        {
-          "name": "Spanish",
           "score": 2
         },
         {
-          "name": "Mandarin",
+          "name": "Spanish",
           "score": 1
         }
       ]
