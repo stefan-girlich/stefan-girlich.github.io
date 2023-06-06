@@ -9,14 +9,15 @@
   "professional_career_history_title": "Professional career",
   "professional_career_history_items": [
     {
-      "organization": "Otterspace 🦦",
+      "organization": "Otterspace GmbH",
       "role": "Technical Lead",
       "start_year": 2022,
       "end_year": null,
-      "text": "Building accessible onboarding experiences to enable DAO participation for everyone",
+      "text": "Building on-chain reputation systems for decentralized communities",
       "activities": [
-        "Conception and implementation of onboarding experiences through responsive web frontend and native mobile applications",
-        "Diving deeper into the social opportunities of building digital democracies"
+        "Technical leadership for Next.js/Express web stack and team of four frontend and backend engineers",
+        "Collaboration with product and UX designers on developing a design system based on Atom Design methodology",
+        "Agile project management and process design along value chain, spanning requirements specification implementation, and deployment"
       ]
     },
     {
