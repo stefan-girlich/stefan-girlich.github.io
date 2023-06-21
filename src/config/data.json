@@ -3,7 +3,7 @@
   "subtitle": "Tech\u00A0enthusiast\u00A0\u00A0| \u00A0Engineer\u00A0\u00A0|\u00A0 IT\u00A0consultant",
   "intro_text": "I'm Stefan, a dedicated IT professional with a deep passion for a broad range of technologies and over ten years of experience working as an engineer, solution architect and consultant in various organizational contexts and industries.",
   "goals_title": "What I do",
-  "goals_text": "I am currently working as a Technical Lead at <a target='_blank' href='https://otterspace.xyz/'>Otterspace</a>. Shoot me a message if you want to know more!",
+  "goals_text": "I am currently looking for new freelance or full-time opportunities as a Technical Lead or Principal Engineer. Find out more about me below, and don't hesitate to reach out!",
   "goals_button_label": "Get in touch",
   "now": "now",
   "professional_career_history_title": "Professional career",
@@ -12,7 +12,7 @@
       "organization": "Otterspace GmbH",
       "role": "Technical Lead",
       "start_year": 2022,
-      "end_year": null,
+      "end_year": 2022,
       "text": "Building on-chain reputation systems for decentralized communities",
       "activities": [
         "Technical leadership for Next.js/Express web stack and team of four frontend and backend engineers",
