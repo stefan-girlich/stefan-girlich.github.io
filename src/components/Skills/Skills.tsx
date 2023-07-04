@@ -1,11 +1,15 @@
 import styled from 'styled-components/macro'
 import SkillSubsectionData from '../../entity/SkillSubsectionData'
 import { SectionTitle } from '../Header/Heading'
+import Page from '../Page/Page'
 import Revealable from '../Revealable/Revealable'
 import SkillsLegendButton from '../SkillsLegendButton/SkillsLegendButton'
 import SkillsSubsection from './SkillsSubsection'
 
-const Root = styled.div`
+const Root = styled(Page)`
+  width: 200%;
+  transform: translateX(-25%);
+
   margin-bottom: ${({ theme }) => theme.spacing(5)};
 `
 

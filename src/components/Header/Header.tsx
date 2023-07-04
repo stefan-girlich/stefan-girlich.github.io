@@ -2,6 +2,7 @@ import styled from 'styled-components/macro'
 import data from '../../config/data.json'
 import RichTextParagraph from '../Paragraph/Paragraph'
 import Revealable from '../Revealable/Revealable'
+import Page from '../Page/Page'
 
 const Root = styled.header`
   margin-top: ${({ theme }) => theme.spacing(6)};
@@ -39,16 +40,18 @@ const Subtitle = styled.h2`
 
 const Header = () => {
   return (
-    <Root>
-      <TitleRow>
-        <Title>{data.title}</Title>
-        <Subtitle>{data.subtitle}</Subtitle>
-      </TitleRow>
+    <Page>
+      <Root>
+        <TitleRow>
+          <Title>{data.title}</Title>
+          <Subtitle>{data.subtitle}</Subtitle>
+        </TitleRow>
 
-      <Revealable disableTranslate>
-        <RichTextParagraph>{data.intro_text}</RichTextParagraph>
-      </Revealable>
-    </Root>
+        <Revealable disableTranslate>
+          <RichTextParagraph>{data.intro_text}</RichTextParagraph>
+        </Revealable>
+      </Root>
+    </Page>
   )
 }
 

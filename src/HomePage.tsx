@@ -1,6 +1,6 @@
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import CareerHistory from './components/CareerHistory/CareerHistory'
-import Contact from './components/Contact/Contact'
+import FinalPage from './components/FinalPage/FinalPage'
 import Goals from './components/Goals/Goals'
 import Header from './components/Header/Header'
 import MainContent from './components/MainContent/MainContent'
@@ -21,9 +21,9 @@ function HomePage() {
       <MainContent>
         <Header />
         <Goals onRequestContact={onRequestContact} />
-        <Motivation />
+        <Motivation elementRef={contactSectionRef} />
         <CareerHistory title={data.professional_career_history_title} items={data.professional_career_history_items} />
-        <CareerHistory title={data.education_history_title} items={data.education_history_items} />
+        {/* <CareerHistory title={data.education_history_title} items={data.education_history_items} /> */}
         <Skills
           title={data.technical_skills_title}
           subsections={data.technical_skills_subsections}
@@ -34,7 +34,8 @@ function HomePage() {
           subsections={data.management_skills_subsections}
           onLegendButtonClick={onRequestSkillsLegend}
         />
-        <Contact elementRef={contactSectionRef} />
+        {/* <Contact elementRef={contactSectionRef} /> */}
+        <FinalPage />
       </MainContent>
       <SkillsLegendOverlay open={isSkillsLegendOpen} onCloseClick={onRequestCloseSkillsLegend} />
     </>

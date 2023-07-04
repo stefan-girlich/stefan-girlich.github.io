@@ -4,6 +4,7 @@ import { SectionTitle } from '../Header/Heading'
 import { RichTextParagraph } from '../Paragraph/Paragraph'
 import Revealable from '../Revealable/Revealable'
 import CallToActionButton from './CallToActionButton'
+import Page from '../Page/Page'
 
 const Root = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing(8)};
@@ -19,13 +20,15 @@ interface Props {
 
 const Goals = ({ onRequestContact }: Props) => {
   return (
-    <Revealable>
-      <Root>
-        <SectionTitle>{data.goals_title}</SectionTitle>
-        <Text>{data.goals_text}</Text>
-        <CallToActionButton onClick={onRequestContact} />
-      </Root>
-    </Revealable>
+    <Page>
+      <Revealable>
+        <Root>
+          <SectionTitle>{data.goals_title}</SectionTitle>
+          <Text>{data.goals_text}</Text>
+          <CallToActionButton onClick={onRequestContact} />
+        </Root>
+      </Revealable>
+    </Page>
   )
 }
 

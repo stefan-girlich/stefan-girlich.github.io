@@ -5,6 +5,7 @@ import CareerHistoryListItem, { CareerHistoryItem } from './CareerHistoryListIte
 
 const Root = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing(8)};
+  margin-bottom: ${({ theme }) => theme.spacing(16)};
 `
 
 const CareerList = styled.ul`

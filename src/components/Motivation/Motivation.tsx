@@ -1,21 +1,27 @@
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { MutableRefObject } from 'react'
 import styled from 'styled-components/macro'
 import data from '../../config/data.json'
 import { SectionTitle } from '../Header/Heading'
+import Page from '../Page/Page'
 import Revealable from '../Revealable/Revealable'
 import MotivationItem from './MotivationItem'
 
-const Root = styled.div`
+const Root = styled(Page)`
   margin-bottom: ${({ theme }) => theme.spacing(8)};
 `
 
 // TODO make icons configurable via data.json
 const ICONS = [solid('code'), solid('house-chimney-user'), solid('handshake-angle')]
 
-const Motivation = () => {
+interface Props {
+  elementRef: MutableRefObject<HTMLDivElement | null>
+}
+
+const Motivation = ({ elementRef }: Props) => {
   return (
-    <Root>
+    <Root ref={elementRef}>
       <Revealable>
         <SectionTitle>{data.motivation_title}</SectionTitle>
       </Revealable>

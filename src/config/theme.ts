@@ -42,7 +42,7 @@ const FONT_SIZES_PX: Record<FontSize, number> = {
 
 const BREAKPOINT_WIDTHS: Record<Breakpoint, number> = {
   mobile: 480,
-  tablet: 960,
+  tablet: 1800,
   desktop: 3840,
 }
 
