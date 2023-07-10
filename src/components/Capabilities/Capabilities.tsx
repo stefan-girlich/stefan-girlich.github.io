@@ -6,16 +6,13 @@ import CapabilityCard from './CapabilityCard'
 
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-// import Revealable from '../Revealable/Revealable'
 
 // TODO make icons configurable via data.json
 const ICONS = [
-  solid('vial'),
-  solid('pen-ruler'),
+  solid('compass-drafting'),
+  solid('screwdriver-wrench'),
   solid('cubes'),
-  solid('link'),
+  solid('vial'),
   solid('signs-post'),
   solid('handshake-simple'),
 ]
@@ -25,7 +22,7 @@ const Root = styled.div`
 `
 
 const CapabilitiesSectionTitle = styled(SectionTitle)`
-  margin-bottom: 40px
+  margin-bottom: 40px;
 `
 
 const Grid = styled.div`
@@ -41,7 +38,7 @@ const Grid = styled.div`
 
 const Capabilities = () => {
   return (
-    <Revealable>
+    <Revealable disableTranslate>
       <Root>
         <CapabilitiesSectionTitle>{data.capabilities_title}</CapabilitiesSectionTitle>
         <Grid>
@@ -50,6 +47,7 @@ const Capabilities = () => {
               title={title}
               text={text}
               icon={<FontAwesomeIcon className="fa-3x" icon={ICONS[index]} />}
+              index={index}
             />
           ))}
         </Grid>

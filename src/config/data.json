@@ -8,20 +8,20 @@
   "capabilities_title": "What I do",
   "capabilities": [
     {
-      "title": "Explore",
-      "text": "Prototyping pragmatic solutions to unusual problems"
+      "title": "Design",
+      "text": "Scalable digital solutions start at the drawing board"
     },
     {
       "title": "Build",
       "text": "Mobile and web apps, backend services, and some more"
     },
     {
-      "title": "Organize",
+      "title": "Deliver",
       "text": "Agile workflows, powered by automated CI/CD"
     },
     {
-      "title": "Connect",
-      "text": "Unlock the combined potential of design and engineering"
+      "title": "Explore",
+      "text": "Prototyping pragmatic solutions to unusual problems"
     },
     {
       "title": "Lead",

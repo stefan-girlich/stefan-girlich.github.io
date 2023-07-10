@@ -2,6 +2,10 @@ import { ReactNode } from 'react'
 import styled from 'styled-components/macro'
 import { SubsectionTitle } from '../Header/Heading'
 import { RichTextParagraph } from '../Paragraph/Paragraph'
+import Revealable from '../Revealable/Revealable'
+
+const REVEAL_DURATION = 0.08
+const ICON_TEXT_REVEAL_OFFSET = 0.3
 
 const Root = styled.div`
   display: flex;
@@ -10,7 +14,7 @@ const Root = styled.div`
   margin-bottom: 32px;
 `
 
-const IconContainer = styled.div`
+const IconContainer = styled(Revealable)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,16 +22,19 @@ const IconContainer = styled.div`
   height: 48px;
   margin-bottom: 4px;
   color: ${({ theme }) => theme.palette.tertiary.main};
-  /* transition: transform 0.4s ease-out, opacity 0.4s ease-out; */
+`
 
-  /* ${({ theme }) => theme.media('tablet')} {
-    width: 48px;
-  } */
+const RevealableTextContainer = styled(Revealable)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `
 
 const CapabilityTitle = styled(SubsectionTitle)`
   transition: opacity 0.4s ease-out 0.1s;
   margin-bottom: 16px;
+  font-weight: 600;
 `
 
 const Text = styled(RichTextParagraph)`
@@ -38,14 +45,17 @@ interface Props {
   title: string
   text: string
   icon: ReactNode
+  index: number
 }
 
-const CapabilityCard = ({ title, text, icon }: Props) => {
+const CapabilityCard = ({ title, text, icon, index }: Props) => {
   return (
     <Root>
-      <IconContainer>{icon}</IconContainer>
-      <CapabilityTitle>{title}</CapabilityTitle>
-      <Text>{text}</Text>
+      <IconContainer delay={index * REVEAL_DURATION}>{icon}</IconContainer>
+      <RevealableTextContainer delay={ICON_TEXT_REVEAL_OFFSET + index * REVEAL_DURATION}>
+        <CapabilityTitle>{title}</CapabilityTitle>
+        <Text>{text}</Text>
+      </RevealableTextContainer>
     </Root>
   )
 }
