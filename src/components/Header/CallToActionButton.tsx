@@ -52,7 +52,7 @@ const CallToActionButton = ({ onClick }: Props) => {
       <IconContainer>
         <FontAwesomeIcon className="fa-xl" icon={solid('arrow-right')} />
       </IconContainer>
-      <Label>{data.goals_button_label}</Label>
+      <Label>{data.contact_cta_label}</Label>
     </Root>
   )
 }

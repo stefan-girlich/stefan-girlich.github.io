@@ -2,10 +2,11 @@ import styled from 'styled-components/macro'
 import data from '../../config/data.json'
 import RichTextParagraph from '../Paragraph/Paragraph'
 import Revealable from '../Revealable/Revealable'
+import CallToActionButton from './CallToActionButton'
 
 const Root = styled.header`
   margin-top: ${({ theme }) => theme.spacing(6)};
-  margin-bottom: ${({ theme }) => theme.spacing(6)};
+  margin-bottom: ${({ theme }) => theme.spacing(10)};
 `
 
 const TitleRow = styled.div`
@@ -37,7 +38,15 @@ const Subtitle = styled.h2`
   line-height: 1.3;
 `
 
-const Header = () => {
+const HomePageParagraph = styled(RichTextParagraph)`
+  margin-bottom: ${({ theme }) => theme.spacing(2)};
+`
+
+interface Props {
+  onRequestContact(): void
+}
+
+const Header = ({ onRequestContact }: Props) => {
   return (
     <Root>
       <TitleRow>
@@ -46,7 +55,11 @@ const Header = () => {
       </TitleRow>
 
       <Revealable disableTranslate>
-        <RichTextParagraph>{data.intro_text}</RichTextParagraph>
+        {data.intro_texts.map((text, index) => (
+          <HomePageParagraph key={index}>{text}</HomePageParagraph>
+        ))}
+
+        <CallToActionButton onClick={onRequestContact} />
       </Revealable>
     </Root>
   )

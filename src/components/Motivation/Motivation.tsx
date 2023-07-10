@@ -11,7 +11,7 @@ const Root = styled.div`
 `
 
 // TODO make icons configurable via data.json
-const ICONS = [solid('code'), solid('house-chimney-user'), solid('handshake-angle')]
+const ICONS = [solid('code'), solid('house-chimney-user'), solid('seedling')]
 
 const Motivation = () => {
   return (

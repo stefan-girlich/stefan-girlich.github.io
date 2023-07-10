@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
+import Capabilities from './components/Capabilities/Capabilities'
 import CareerHistory from './components/CareerHistory/CareerHistory'
 import Contact from './components/Contact/Contact'
-import Goals from './components/Goals/Goals'
 import Header from './components/Header/Header'
 import MainContent from './components/MainContent/MainContent'
 import Motivation from './components/Motivation/Motivation'
@@ -19,8 +19,8 @@ function HomePage() {
   return (
     <>
       <MainContent>
-        <Header />
-        <Goals onRequestContact={onRequestContact} />
+        <Header onRequestContact={onRequestContact} />
+        <Capabilities />
         <Motivation />
         <CareerHistory title={data.professional_career_history_title} items={data.professional_career_history_items} />
         <CareerHistory title={data.education_history_title} items={data.education_history_items} />
