@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const ICONS = [
   solid('compass-drafting'),
   solid('screwdriver-wrench'),
-  solid('cubes'),
+  solid('truck-fast'),
   solid('vial'),
   solid('signs-post'),
   solid('handshake-simple'),
