@@ -37,6 +37,18 @@
   "professional_career_history_title": "Professional career",
   "professional_career_history_items": [
     {
+      "organization": "Freelance",
+      "role": "Technical Lead",
+      "start_year": 2023,
+      "end_year": null,
+      "text": "Helping startups build scalable technical solutions",
+      "activities": [
+        "Defining data government models, threat modeling frameworks, and implementation roadmaps",
+        "Evaluating and implementing technical solutions in collaboration with product owners and external domain experts",
+        "Introduction of agile design and development processes including automated quality assurance and deployments"
+      ]
+    },
+    {
       "organization": "Otterspace GmbH",
       "role": "Technical Lead",
       "start_year": 2022,
