@@ -36,16 +36,16 @@
   "now": "now",
   "professional_career_history_title": "Professional career",
   "professional_career_history_items": [
-     {
+    {
       "organization": "Minimise GmbH",
       "role": "Technical Lead",
       "start_year": 2024,
       "end_year": null,
-      "text": "Helping startups build scalable technical solutions",
+      "text": "Helping fix the global e-waste problem",
       "activities": [
-        "Defining data government models, threat modeling frameworks, and implementation roadmaps",
-        "Evaluating and implementing technical solutions in collaboration with product owners and external domain experts",
-        "Introduction of agile design and development processes including automated quality assurance and deployments"
+        "Building digital solutions for e-waste traceability and management",
+        "Holistic responsibility for digital product design and full-stack implementation",
+        "Requirements engineering in collaboration with external technical stakeholders"
       ]
     },
     {
@@ -53,11 +53,11 @@
       "role": "Technical Lead",
       "start_year": 2023,
       "end_year": 2024,
-      "text": "Helping fix the global e-waste problem",
+      "text": "Helping startups build scalable technical solutions",
       "activities": [
-        "Building digital solutions for e-waste traceability and management",
-        "Holistic responsibility for digital product design and full-stack implementation",
-        "Requirements engineering in collaboration with external technical stakeholders"
+        "Defining data government models, threat modeling frameworks, and implementation roadmaps",
+        "Evaluating and implementing technical solutions in collaboration with product owners and external domain experts",
+        "Introduction of agile design and development processes including automated quality assurance and deployments"
       ]
     },
     {
